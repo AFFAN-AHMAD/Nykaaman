@@ -4,11 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png" type="image/x-icon">
+    <title>Mens Grooming, Hair Care, Skin Care &amp; Wellness Products Online at Best Prices in India | NykaaMan</title>
+    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-    <div>
+    <div id="navbar">       
         
     </div>
 </body>
 </html>
+
+<script type="module">
+    import {navbar} from "./components/navbar.js"
+    console.log('navbar:', navbar)
+
+    let header = document.getElementById("navbar");
+    header.innerHTML = navbar();
+
+
+    $('#navbar-toggle').click(function() {
+      $('nav ul').slideToggle();
+    });
+    $('#navbar-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+    $('nav ul li a:not(:only-child)').click(function(e) {
+      $(this).siblings('.navbar-dropdown').slideToggle("slow");
+      $('.navbar-dropdown').not($(this).siblings()).hide("slow");
+      e.stopPropagation();
+    });
+    $('html').click(function() {
+      $('.navbar-dropdown').hide();
+    });
+
+</script>
