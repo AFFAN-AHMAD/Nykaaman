@@ -2,7 +2,7 @@
 const saveData = () => {
   
 
-  let country = document.getElementById("country").value;
+  // let country = document.getElementById("country").value;
 
   let name = document.getElementById("name").value;
 
@@ -21,8 +21,26 @@ const saveData = () => {
     ? JSON.parse(localStorage.getItem("users"))
     : [];
   
+    // let messages = []
+
+    // if (name.value === '' || name.value == null) {
+    //       messages.push('Name is required')
+    //     }
+
+    // if (email.value === '' || email.value == null) {
+    //           messages.push('Email is required')
+    //         }    
+
+    // if (phone.value === '' || phone.value == null) {
+    //   messages.push('Mobile Number is required')
+    // }      
+    
+    // if (messages.length > 0) {
+      //     e.preventDefault()
+      //     errorElement.innerText = messages.join(', ')
+      //   }
+
     user_records.push({
-      country: country,
       name: name,
       email: email,
       phone: phone,
