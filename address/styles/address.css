@@ -17,11 +17,11 @@ body {
   display: flex;
   width: 60%;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   justify-content: space-between;
   box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   
 }
 
@@ -36,7 +36,7 @@ body {
 .second {
     display: flex;
     /* margin-left: 100px; */
-    font-size: ;
+    /* font-size: ; */
   }
 
 .cart {
@@ -77,13 +77,45 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+#middle{
+  display: flex;
+  justify-content: center;
+}
+
+#left{
+    background-color: white;
+    width: 15%;
+    /* margin: auto; */
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+    padding: 1%;
+    border-radius: 0 0 3px 3px;
+    height: 70px;
+}
+.ad{
+  height: 40px;
+  font-size: 18px;
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
+}
+
+/* #right{
+  background-color: white;
+  width: 15%;
+  margin: auto;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+  padding: 1%;
+  border-radius: 0 0 3px 3px;
+  height: 70px;
+} */
 
 .middle {
     background-color: white;
     width: 25%;
-    margin: auto;
+    /* margin: auto; */
+    margin-left: 10px;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
     padding: 1%;
+    border-radius: 0 0 3px 3px;
   }
   
   input {

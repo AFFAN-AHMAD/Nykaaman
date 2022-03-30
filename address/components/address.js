@@ -33,3 +33,7 @@ const saveData = () => {
   
       window.location.href = "payment.html";
 };
+
+// document.getElementsByClassName("logo").addEventListener("onclick", click(){
+//   window.location.href = "index.html";
+// })

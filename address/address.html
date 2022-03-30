@@ -21,49 +21,70 @@
     <div id="container">
       
     </div>
-    <!-- <form action="#" id="form"> -->
-      <div class="middle">
-        <div class="address">New Address</div>
-        <!-- <hr /> -->
-        <p class="p">select Country</p>
-        <p id="country" class="p">India</p>
-        <!-- <hr /> -->
-        <div class="customer">
-          <input type="text" class="flat" placeholder="Name" id="name" />
+    
+      <div id="middle">
+        <div id="left">
+          <div class="ad">Saved Address</div>
+          <div class="ad">New Address</div>
         </div>
-        <!-- <hr /> -->
-        <div class="email">
-          <input type="email" class="flat1" placeholder="Email" id="email" />
+        <div class="middle">
+          <div class="address">New Address</div>
+          
+          <p class="p">select Country</p>
+          <p id="country" class="p">India</p>
+          
+          <div class="customer">
+            <input type="text" class="flat" placeholder="Name" id="name" />
+          </div>
+          
+          <div class="email">
+            <input type="email" class="flat1" placeholder="Email" id="email" />
+          </div>
+          
+          <div class="digit">
+            <p class="p">Phone Number</p>
+            
+            <input type="tel" placeholder="" id="phone" />
+          </div>
+          
+          <div class="pincode">
+            <input
+              type="tel"
+              class="flat"
+              placeholder="Postal Code"
+              id="pin"
+            />
+          </div>
+          
+          <div class="locality">
+            <input
+              type="text"
+              class="flat"
+              placeholder="Address"
+              id="locality"
+            />
+          </div>
+          <div></div>
+          
+          <button onclick="saveData()"><b>SHIP TO THIS ADDRESS ></b></button>
         </div>
-        <!-- <hr /> -->
-        <div class="digit">
-          <p class="p">Phone Number</p>
-          <!-- +91 -->
-          <input type="tel" placeholder="" id="phone" />
+
+        <div id="right">
+          <!-- Cart Data -->
         </div>
-        <!-- <hr /> -->
-        <div class="pincode">
-          <input
-            type="tel"
-            class="flat"
-            placeholder="Postal Code"
-            id="pin"
-          />
-        </div>
-        <!-- <hr /> -->
-        <div class="locality">
-          <input
-            type="text"
-            class="flat"
-            placeholder="Address"
-            id="locality"
-          />
-        </div>
-        <div></div>
-        <!-- <hr> -->
-        <button onclick="saveData()"><b>SHIP TO THIS ADDRESS ></b></button>
+
+
+
+
+        
+
+
+
+
+
+
       </div>
-    <!-- </form> -->
+    
   </body>
 </html>
 
