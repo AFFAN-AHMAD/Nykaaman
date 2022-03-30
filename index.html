@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>homepage</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <div id="navbar"></div>
+    <hr></hr>
+    <div id="menu"></div>
     <div id="body"></div>
     <div id="footer"></div>
 </body>
 </html>
+<script type="module">
+     const select=(id)=>{
+        return document.querySelector(id)
+    }
+    const make=(id)=>{
+        return document.createElement(id)
+    }
+
+    import {navbar,menu} from "./components/navbar.js";
+    let nav = select("#navbar")
+    let menus = select("#menu")
+    menus.innerHTML=menu()
+    nav.innerHTML=navbar()
+
+   
+</script>
