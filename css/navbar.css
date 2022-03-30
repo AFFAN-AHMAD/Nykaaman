@@ -13,7 +13,7 @@ body {
     position: sticky;
     top:0;
     background-color: #FFFFFF;
-   
+   z-index: 1;
   }
   #navbar>section{
    
