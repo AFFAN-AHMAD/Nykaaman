@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    <title>Otp</title>
+    <style>
+         #container {
+        width:25%;
+        height:550px;
+        /* border:1px solid red; */
+        text-align: center;
+        margin-left: 37%;
+        margin-top: 70px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+    body {
+        background-color: rgb(243,243,243);
+    }
+    #login{
+        font-size: 17px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 500;
+            line-height: 26px;
+            display: inline-block;
+            margin-left: 18%;
+    }
+    #logo{
+        margin-left: -50px;
+    }
+    #otpDiv{
+            border: 1px solid transparent;
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            margin-top: 5%;
+        }
+        #welcomeTo{
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: rgb(55,69,84);
+        }
+        #loginOtp{
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: rgb(101,126,129);
+        }
+        #otpNum{
+            margin-left: 7%;
+            height: 43px;
+            width: 80%;
+            border: 0px;
+            outline: none;
+            border-bottom: 1px solid black;
+        }
+        #otpNum::placeholder{
+            text-align: center;
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        #input{
+            border: 1px solid transparent;
+            width: 90%;
+            height: 55px;
+            margin: auto;
+            margin-top: 5%;
+        }
+        #btn{
+            border: 1px solid transparent;
+            width: 86%;
+            height: 60px;
+            margin: auto;
+        }
+        #btnVerify{
+            background-color: #003243;
+            color: white;
+            width: 80%;
+            height: 50px;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 600;
+            line-height: 24px;
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <i class="fas fa-times fa-2x" id="logo"></i>
+        <p id="login">REGISTER</p>
+        <hr style="opacity: 0.5; width: 90%;">
+
+        <div id="welcome">
+            <p id="welcomeTo">Welcome to Nykaa Man!</p>
+        </div>
+
+        <div id="otpDiv">
+            <p id="loginOtp">Register now and get 2000 Reward Points!</p><br><br><br>
+            <p id="loginOtp">Please enter the OTP sent to verify your phone number</p>
+        </div>
+        <br><br><br><br>
+
+        <div id="input">
+            <input id="otpNum" type="number" placeholder="OTP" required>
+        </div>
+
+        <br><br>
+
+        <div id="btn">
+            <button id="btnVerify">VERIFY</button>
+        </div>
+
+
+        <!-- <form action="/action_page.php" method="post">
+            <input id="otpNum" type="number" placeholder="OTP" required>
+            <br><br><br>
+            <button id="btnVerify">VERIFY</button>
+           
+          </form> -->
+
+    </div>
+</body>
+</html>
+
+
+<script>
+
+
+
+document.getElementById("logo").addEventListener("click", () => {
+        window.location = "login.html";
+    })
+
+    let btn_verify = document.getElementById("btnVerify");
+
+    let user = JSON.parse(localStorage.getItem("userData"));
+    console.log(user);
+
+    btn_verify.addEventListener("click", () =>{
+        let input_otp = document.getElementById("otpNum").value;
+        if(input_otp.length !== 6) {
+        alert("Please enter 6 digit OTP")
+        } 
+        // if(input_otp.length == 6)
+        else {
+            
+        window.location = "signup.html";
+        }
+        });
+</script>
