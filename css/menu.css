@@ -104,7 +104,7 @@ margin-left:-750px
 
 }
 #gadgets{
-margin-left:-700px
+margin-left:-750px
 
 }
 .subcategory a{
@@ -113,6 +113,9 @@ line-height: -5px;
 }
 .subcategory p>a:hover{
 color:teal
+}
+#lux{
+  margin-left: -200px;
 }
 
 @media only screen and (max-width: 700px) and (min-width:300px)

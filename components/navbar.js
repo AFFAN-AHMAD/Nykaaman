@@ -287,7 +287,7 @@ const menu = () => {
   </div>
 
   <div class="category"><a href="#">LUXE</a>
-      <div class="subcategory">
+      <div class="subcategory" id="lux">
           <div class="cat1"><h5>BATH & BODY</h5></div>
           <div class="cat2"><h5>HAIR</h5> </div>
           <div class="cat1"><h5>FRAGRANCE</h5></div>
