@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    <title>Log In</title>
+</head>
+<style>
+    #container{
+        width:25%;
+        height:700px;
+        /* border:1px solid red; */
+        text-align: center;
+        margin-left: 37%;
+        margin-top: 70px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+    body {
+        background-color: rgb(243,243,243);
+    }
+    #login{
+        font-size: 17px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 500;
+            line-height: 26px;
+            display: inline-block;
+            margin-left: 18%;
+    }
+    #logo{
+        margin-left: -50px;
+    }
+    #container>h3{
+        margin-top: 100px;
+    }
+    #number {
+        width:80%;
+        height:40px;
+        background-color: rgb(243,243,243);
+        border : 1px solid black;
+        color: rgb(93,106,117);
+        font-size: 15px;
+        text-align: center;
+    }
+    #proceed{
+        width:80%;
+        height:40px;
+        font-size: 20px;
+        background-color: rgb(0,50,67);
+        color:white;
+        border:1px solid rgb(0,50,67);
+    }
+</style>
+<body>
+    <div id="container">
+        <i class="fas fa-times fa-2x" id="logo"></i>
+        <p id="login">LOGIN / REGISTER</p>
+        <hr style="opacity: 0.5; width: 90%;">
+        <div>
+            <input type="text" placeholder="Enter Phone Number or Email" required id="number" required />
+        </div>
+    
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <div id="proceedlog">
+        <button id="proceed">PROCEED</button>
+     </div>
+     
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+     <br><br>
+
+     
+</body>
+</html>
+
+<script>
+
+
+document.getElementById("logo").addEventListener("click", () => {
+        window.location = "signin.html";
+    });
+
+var userAr = JSON.parse(localStorage.getItem("userData")) || [];
+
+let bnt_proceed = document.getElementById("proceedlog");
+
+bnt_proceed.addEventListener("click", () =>{
+    let user_mobile = document.getElementById("number").value;
+
+    if(user_mobile.length == 10){
+        alert("OTP sent to your registered mobile number");
+    }
+
+    if(user_mobile.length !== 10){
+        alert("Please enter 10 digit mobile number");
+    }  else {
+        let userD = {
+        mobile: user_mobile,
+        
+    }
+    userAr.push(userD);
+    localStorage.setItem("userData", JSON.stringify(userAr));
+    window.location = "otp.html";
+    }
+   
+   
+   
+});
+    
+</script>

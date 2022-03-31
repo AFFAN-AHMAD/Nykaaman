@@ -830,6 +830,7 @@
     const make=(id)=>{
         return document.createElement(id)
     }
+// import export function
 
     import {navbar,menu} from "./components/navbar.js";
     import footermain from "./components/footer.js"
@@ -838,13 +839,34 @@
     menus.innerHTML=menu()
     nav.innerHTML=navbar()
    
-        console.log(footermain)
+        // console.log(footermain)
 
         let f = document.querySelector("#foot")
         f.innerHTML=footermain()
+// input search function
+        let searchbar = select("#searching")
+        searchbar.addEventListener("input",function()
+        {
+          let search = searchbar.value
+          searchitems(search)
+        })
+
+        const searchitems=(x)=>{
+          console.log(x)
+        }
+
+
+// login page link function
+        let logDiv=select("#account")
+        logDiv.addEventListener("click", function () {
+        console.log("x")
+        window.location.href = "./login_and_signup/signin.html"
+})
+   
    
 </script>
 <script src="./js/main.js"></script>
 <script src="./js/d.js"></script>
 
+<script src = "./js/signupLoginLink.js"></script>
 

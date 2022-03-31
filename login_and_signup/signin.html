@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    
+    <title>Sign In In</title>
+</head>
+<style>
+    #container {
+        width:25%;
+        height:650px;
+        /* border:1px solid red; */
+        text-align: center;
+        margin-left: 37%;
+        margin-top: 70px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+    body {
+        background-color: rgb(243,243,243);
+    }
+    #login{
+        font-size: 17px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 40px;
+            display: inline-block;
+            margin-left: 18%;
+            margin-bottom:10px ;
+    }
+    #logo{
+        margin-left: -50px;
+    }
+    
+    h3{
+        color: rgb(99,110,122);
+        margin-left: 30px;
+        margin-right: 30px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+        
+    }
+    #signin {
+        width:80%;
+        height:40px;
+        font-size: 20px;
+        background-color: rgb(0,50,67);
+        color:white;
+        border-radius: 5px;
+        border:1px solid rgb(0,50,67);
+    }
+    #google{
+        height:40px;
+        width:80%;
+        border:1px solid rgb(0,50,67);
+        margin: auto;
+    }
+    #google>h3{
+        text-align: center;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 540;
+
+    }
+</style>
+<body>
+    <div id="container">
+        <i class="fas fa-times fa-2x" id="logo"></i>
+        <p id="login">Sign in</p>
+        
+    <h3>To quickly find your favourites items, saved addresses and payments.</h3>
+    <hr style="opacity: 0.5; width: 80%;">
+    <h3>Register and earn 2000 reward points</h3>
+    <br><br>
+   
+    <img style="width:80%; height:200px" src="https://th.bing.com/th/id/OIP.eV8ChyYlQ1vgeZO5wzVtpQHaFW?pid=ImgDet&rs=1">
+    <br>
+
+    <button id="signin">Enter Phone Number or Email</button>
+    <br><br>
+
+    <div id="google">
+        <h3>Google</h3>
+    </div>
+    <h3>By continuing, you agree that you have read and accept our <a href="">T&Cs</a> and <a href="">Privacy Policy</a></h3>
+
+    </div>
+</body>
+</html>
+
+<script>
+    
+    document.getElementById("logo").addEventListener("click", () => {
+        window.location = "../index.html";
+    });
+
+
+    document.getElementById("signin").addEventListener("click", () => {
+        window.location = "login.html";
+    })
+</script>
