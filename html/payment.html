@@ -11,12 +11,13 @@
       href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../css/address.css">
+    <link rel="stylesheet" href="../css/payment.css">
 </head>
 <body>
     <div id="container">
       
     </div>
+    <div id="down"></div>
 </body>
 </html>
 
@@ -24,4 +25,8 @@
     import nav from "../components/addnav.js"
     let navbar = document.getElementById("container");
     navbar.innerHTML = nav();
+
+    import foot from "../components/addfoot.js";
+  let footer = document.getElementById("down");
+  footer.innerHTML = foot();
 </script>
