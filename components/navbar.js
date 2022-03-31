@@ -48,9 +48,9 @@ const menu = () => {
           </div>
           <div class="cat1"> <h5>SHAVING CREAMS & LOTIONS</h5>
               
-                  <p><a href="#">Shaving Creams</a></p>
-                  <p><a href="#">Shaving Foams, Gels & Soaps</a></p>
-                  <p><a href="#">Pre Shave & After Shave Lotions</a></p>
+                  <p onclick="detaSort(event='Shaving Cream')"><a href="#">Shaving Creams</a></p>
+                  <p onclick="detaSort(event='ShavingFoam')"><a href="#">Shaving Foams, Gels & Soaps</a></p>
+                  <p onclick="detaSort(event='AfterShave')"><a href="#">Pre Shave & After Shave Lotions</a></p>
               
           </div>
           <div class="cat2"><h5>SHAVING KITS</h5></div>

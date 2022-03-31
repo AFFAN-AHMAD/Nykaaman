@@ -204,10 +204,6 @@
 }
 
 .control-indicator-radio{
-    text-size-adjust: 100%;
-    font-family: Inter, Roboto, Arial, sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
     list-style: none;
     cursor: pointer;
     font-size: 14px;
@@ -230,16 +226,7 @@
     border-radius: 50%;
 }
 .control-indicator-radio:hover:after{
-    content: "";
-    width: 3px;
-    height: 8px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-image: initial;
-    border-width: 0px 2px 2px 0px;
-    transform: rotate(45deg);
-    margin-bottom: 2px;
-    background: rgb(0, 50, 67);
+    content:"";
     list-style: none;
     cursor: pointer;
     font-size: 14px;
@@ -247,7 +234,19 @@
     line-height: 20px;
     letter-spacing: 0px;
     color: rgb(0, 49, 37);
-
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    border: 2px solidrgba(0, 50, 67);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgba(0, 50, 67);
+    border-radius: 50%;
 }
 
 #radio_popularity_undefined,#radio_discount_undefined,#radio_name_undefined,#radio_customer-top-rated_undefined,#radio_new-arrivals_undefined,#radio_price-high-to-low_undefined,#radio_price-low-to-high_undefined{
@@ -290,6 +289,8 @@
     overflow: hidden;
     padding: 0 0.65rem;
 }
+
+
 
 .plwd2{
     margin: 0px;
@@ -483,8 +484,10 @@
     bottom: 0;
     right: 0;
     display: flex;
+    justify-content: space-evenly;
     -webkit-box-align: center;
     align-items: center;
+    
 }
 
 .bd11{
@@ -497,7 +500,7 @@
     margin: 0px;
     overflow: visible;
     text-transform: none;
-    appearance: button;
+    /* appearance: button; */
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -538,6 +541,17 @@
     border: none;
     cursor: pointer;
 }
+
+.plwd1 .plwd11{
+    display: none;
+}
+
+.plwd1:hover .plwd11{
+    display: block;
+    display: flex;
+    justify-content: space-evenly
+}
+
 
 .spand11{
     font-family: inherit;
