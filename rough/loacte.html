@@ -17,7 +17,7 @@
       }
       #shopping {
         width: 100%;
-        height: 40px;
+        height: 60px;
         margin-top: 0px;
         border: 1px solid black;
         background-color: #fff;
@@ -27,9 +27,9 @@
         display: flex;
         /* justify-content: center; */
       }
-      #shopping > h4 {
-        padding-top: -5px;
-        /* margin-top: 10px; */
+      #shopping  h3 {
+        /* border:1px solid red; */
+        color:#134;
         text-align: center;
       }
       .back-btn {
@@ -68,6 +68,16 @@
         display: flex;
         justify-content: space-around;
       }
+      #proceedDiv{
+          width:100%;
+          height:50px;
+          bottom:0;
+          background-color: #fff;
+          z-index: 1;
+          display: flex;
+          justify-content: space-between
+          ;
+      }
     </style>
   </head>
   <body>
@@ -83,9 +93,17 @@
             ></path>
           </svg>
         </button>
-        <h4>Shopping Bag</h4>
+        <h3>Shopping Bag</h3>
       </div>
-      <div id="prodDetails"></div>
+      <div id="prodDetails">
+          <div id="proceedDiv">
+              <div>
+                  <p>Grand Total</p>
+                  <h4>3822</h4>
+              </div>
+              <div id="proceed" >Proceed ></div>
+          </div>
+      </div>
     </div>
   </body>
 </html>
@@ -157,7 +175,7 @@
 
     let paymentDiv = make("div");
     paymentDiv.innerHTML = `
-                <div>Payment Details</div>
+                <div><h3>Payment Details</h3></div>
                 <div id="details">
                     <div> <h5>Bag Total</h5> <h5 id="total"></h5>
                     </div>
