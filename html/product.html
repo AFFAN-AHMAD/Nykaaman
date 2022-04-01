@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Product Page</title>
+    <title>Product Page</title>
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -28,26 +28,29 @@
                                     </svg>
                             </button>
                             <ul class="sort-0ul">
-                                <!-- popularity -->
-                                <div class="sort-0ul-li"><input id="radio_popularity_undefined" type="radio"><label class="control-radio" for="radio_popularity_undefined"><div class="control-value"><span class="title">popularity</span></div><div class="control-indicator-radio "></div></label>
-                                </div>
+                               
                                 <!-- discount -->
-                                <div class="sort-0ul-li"><input id="radio_discount_undefined" type="radio" checked=""><label class="control-radio" for="radio_discount_undefined"><div class="control-value"><span class="i" id='discount'>discount</span></div><div onclick="discount()" class="control-indicator-radio"></div></label>
+                                <div class="sort-0ul-li"><input id="radio_discount_undefined" type="radio" checked=""><label class="control-radio" for="radio_discount_undefined"><div class="control-value"><span class="i" id='discount'>discount</span></div><div id="discountid" class="control-indicator-radio"></div></label>
                                 </div>
                                 <!-- name -->
-                                <div class="sort-0ul-li"><input id="radio_name_undefined" type="radio"><label class="control-radio" for="radio_name_undefined"><div class="control-value"><span class="title">name</span></div><div onclick="name()" class="control-indicator-radio "></div></label>
+                                <div class="sort-0ul-li"><input id="radio_name_undefined" type="radio"><label class="control-radio" for="radio_name_undefined"><div class="control-value"><span class="title">name</span></div><div id="nameA" class="control-indicator-radio "></div></label>
                                 </div>
-                                <!-- customer-top-rated -->
-                                <div class="sort-0ul-li"><input id="radio_customer-top-rated_undefined" type="radio"><label class="control-radio" for="radio_customer top rated_undefined"><div class="control-value"><span class="title"i>customer top rated</span></div><div class="control-indicator-radio "></div></label>
-                                </div>
-                                <!-- new-arrival -->
-                                <div class="sort-0ul-li"><input id="radio_new-arrivals_undefined" type="radio"><label class="control-radio" for="radio_new arrivals_undefined"><div class="control-value"><span class="title">new arrivals</span></div><div class="control-indicator-radio "></div></label>
-                                </div>
+                               
                                 <!-- price-high-to-low -->
-                                <div class="sort-0ul-li"><input id="radio_price-high-to-low_undefined" type="radio"><label class="control-radio" for="radio_price: high to low_undefined"><div class="control-value"><span class="title">price: high to low</span></div><div onclick="htolow()" class="control-indicator-radio "></div></label>
+                                <div class="sort-0ul-li"><input id="radio_price-high-to-low_undefined" type="radio"><label class="control-radio" for="radio_price: high to low_undefined"><div class="control-value"><span class="title">price: high to low</span></div><div id="htol" class="control-indicator-radio "></div></label>
                                 </div>
                                 <!-- price-low-to-high -->
-                                <div class="sort-0ul-li"><input id="radio_price-low-to-high_undefined" type="radio"><label class="control-radio" for="radio_price: low to high_undefined"><div class="control-value"><span class="title">price: low to high</span></div><div onclick="lowtoh()" class="control-indicator-radio "></div></label>
+                                <div class="sort-0ul-li"><input id="radio_price-low-to-high_undefined" type="radio"><label class="control-radio" for="radio_price: low to high_undefined"><div class="control-value"><span class="title">price: low to high</span></div><div id="ltoh" class="control-indicator-radio "></div></label>
+                                </div>
+                                 <!-- popularity -->
+                                 <div class="sort-0ul-li"><input id="radio_popularity_undefined" type="radio"><label class="control-radio" for="radio_popularity_undefined"><div class="control-value"><span class="title">popularity</span></div><div class="control-indicator-radio "></div></label>
+                                </div>
+                                 <!-- customer-top-rated -->
+                                 <div class="sort-0ul-li"><input id="radio_customer-top-rated_undefined" type="radio"><label class="control-radio" for="radio_customer top rated_undefined"><div class="control-value"><span class="title"i>customer top rated</span></div><div class="control-indicator-radio "></div></label>
+                                </div>
+                                
+                                <!-- new-arrival -->
+                                <div class="sort-0ul-li"><input id="radio_new-arrivals_undefined" type="radio"><label class="control-radio" for="radio_new arrivals_undefined"><div class="control-value"><span class="title">new arrivals</span></div><div class="control-indicator-radio "></div></label>
                                 </div>
                             </ul>
                         </div>
@@ -107,8 +110,8 @@
     console.log(data,"data")
     
 
-    append(data)
-    function append(data){
+    appendd(data)
+    function appendd(data){
         container.innerHTML= null
         data.forEach(function(ele){
             let d1 = document.createElement('div')
@@ -243,21 +246,29 @@
     }
 
     // sort functions
-
+    let disc = document.querySelector("#discountid")
+    disc.addEventListener("click",function() {
+        discount()
+    })
     function discount(){
         let dd = document.querySelector("#sort-namely")
         dd.innerHTML= "Sort By : Discount"
         console.log("dd",dd)
-        data.sort(function(a,b){
+        let Data = data.sort(function(a,b){
              return b.disc - a.disc
          })
 
-         append(data)
-         console.log('discountData',data)
-        //  window.location.href='product.html'
+         appendd(Data)
+         console.log('discountData',Data)
+        
     }
 
     //highto-low
+    let htol = document.querySelector("#htol")
+    htol.addEventListener("click",function() {
+        htolow()
+    })
+    
 
     function htolow(){
         let dd = document.querySelector("#sort-namely")
@@ -267,12 +278,17 @@
              return b.mrp - a.mrp
          })
 
-         append(data)
+         appendd(data)
          console.log('mrp',data)
-        //  window.location.href='product.html'
+        
     }
 
     //low to high resolution
+
+    let ltoh = document.querySelector("#ltoh")
+    ltoh.addEventListener("click",function() {
+        lowtoh()
+    })
 
     function lowtoh(){
         let dd = document.querySelector("#sort-namely")
@@ -282,12 +298,17 @@
              return a.mrp - b.mrp
          })
 
-         append(data)
+         appendd(data)
          console.log('mrp',data)
-        //  window.location.href='product.html'
+        
     }
 
     //name
+
+    let nameA = document.querySelector("#nameA")
+    nameA.addEventListener("click",function() {
+        name()
+    })
 
     function name(){
         let dd = document.querySelector("#sort-namely")
@@ -297,33 +318,46 @@
              return a.name.localeCompare(b.name)
          })
 
-         append(data)
+         appendd(data)
          console.log('name',data)
-        //  window.location.href='product.html'
+        
     }
+
   
   
+
+
+
+    import {navbar,menu} from "../components/navbar.js";
+    import footermain from "../components/footer.js"
+    console.log("footermain",footermain)
+    let nav =  document.querySelector("#navbar")
+    let menus =  document.querySelector("#menu")
+    menus.innerHTML=menu()
+    nav.innerHTML=navbar()
+
 
     let foot = document.querySelector("#footer")
     foot.innerHTML=footermain()
 
+
     //product sort by CATEGORY
 
-function detaSort(event){
+// function detaSort(event){
   
-  let pdatabase = JSON.parse(localStorage.getItem("Nykaman")) || []
-  console.log("pdatabase",pdatabase)
-    localStorage.removeItem("Nykaman")
-    // console.log(event)
+//   let pdatabase = JSON.parse(localStorage.getItem("Nykaman")) || []
+//   console.log("pdatabase",pdatabase)
+//     localStorage.removeItem("Nykaman")
+//     // console.log(event)
   
-    sort = pdatabase.filter(function(el){
-      return el.cat.includes(event)
-    })
-    // console.log("dataaaaa",sort)
-    localStorage.setItem("Nykaman",JSON.stringify(sort))
-    window.location.href ="./html/product.html"
+//     sort = pdatabase.filter(function(el){
+//       return el.cat.includes(event)
+//     })
+//     // console.log("dataaaaa",sort)
+//     localStorage.setItem("Nykaman",JSON.stringify(sort))
+//     window.location.href ="./html/product.html"
   
-  }
+//   }
    
 </script>
 <!-- <script src="../js/main.js"></script> -->
