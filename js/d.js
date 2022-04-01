@@ -22,7 +22,7 @@ shavingcreameAndLotion =[
         cat : "Shaving Cream"
     },
     {
-        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/9/797776127306_1a.jpg",
+        img:"https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/4/4/44e720d8710103962571.jpg",
         name:"Bombay Shaving Company Shaving Cream (100g)",
         mrp:169,
         disc:13,

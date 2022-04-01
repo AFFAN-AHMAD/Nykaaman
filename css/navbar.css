@@ -13,8 +13,8 @@ body {
   background-color: #ffffff;
   z-index: 1;
 }
-#navbar > section {
-}
+
+
 #navbar section.sec1 {
   /* border: 1px solid yellow; */
   height: 40px;
@@ -23,9 +23,9 @@ body {
   color: white;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 10px 70px 0px 70px;
-  position: sticky;
-  top: 0px;
+  padding:10px 70px 0px 70px;
+  position:sticky;
+  top:0px
 }
 #navbar section.sec1 > div:nth-child(2) {
   display: flex;
@@ -33,12 +33,14 @@ body {
   justify-content: space-between;
   font-size: 14px;
 }
+
 .navicon {
   fill: #285773;
   width: 15px;
   height: 15px;
   /* margin-right: 0px; */
 }
+
 .navicon1 {
   fill: #285773;
   width: 15px;
