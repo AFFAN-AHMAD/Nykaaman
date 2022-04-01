@@ -867,6 +867,12 @@
         console.log("x")
         window.location.href = "./login_and_signup/signin.html"
 })
+
+let user=document.querySelector("#user")
+
+let usernam=JSON.parse(localStorage.getItem("UserDetails")) || [];
+ 
+user.innerText=usernam[0].name;
    
 
 // data 
