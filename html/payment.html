@@ -14,9 +14,157 @@
     <link rel="stylesheet" href="../css/payment.css">
 </head>
 <body>
-    <div id="container">
-      
+  <div id="container"></div>
+  <div id="safety">
+    <div id="i"><p>i</p></div>
+    
+    <p>Please use a digital payment method & help us ensure contactless delivery for your safety</p>
+  </div>
+  <div id="methods">CHOOSE PAYMENT METHOD</div>
+  <div class="container">
+    <div class="middlecont">
+      <div class="left">
+        <div class="wallet">
+          <div class="wallets">
+            
+            <div class="cont-wal">WALLETS</div>
+          </div>
+          <!-- second -->
+          <div class="wallets">
+            
+            <div class="cont-wal">UPI</div>
+          </div>
+          <div class="wallets">
+            
+            <div class="cont-wal">CARDS</div>
+          </div>
+          <div class="wallets">
+            
+            <div class="cont-wal">NET BANKING</div>
+          </div>
+          <div class="wallets">
+            
+            <div class="cont-wal">PAY ON DELIVERY</div>
+          </div>
+        </div>
+        <div class="credicard">
+          <div class="upper">
+            <div class="creditdebit">Credit & Debit Cards</div>
+            <div class="addnew" style="color: black">
+              Add new Cards For Payment
+            </div>
+          </div>
+
+          <div class="cardnamee" style="color: black">Card Number</div>
+          <div class="cardin">
+            <input
+              class="all"
+              type="number"
+              placeholder="XXXXXXXXXXXX"
+              id="cardnum"
+              maxlength="9"
+            />
+          </div>
+          <div class="expisc">
+            <div class="expiry" style="color: black">Expiry Date(MM/YY)</div>
+            <div class="securitycode" style="color: black">CVV</div>
+          </div>
+          <div class="secinp">
+            <div class="monthyear"></div>
+            <div class="cvv"></div>
+          </div>
+          <div class="namecard">
+            <div id="datediv" style="display: flex; align-items: center">
+              <input
+                class="all"
+                type="text"
+                id="month"
+                placeholder="MM"
+                maxlength="2"
+                oninput="this.value=this.value.replace(/[^00-99]/g,'');"
+              />
+              <p id="slash">/</p>
+              <input
+                class="all"
+                type="text"
+                id="year"
+                placeholder="YY"
+                maxlength="2"
+                oninput="this.value=this.value.replace(/[^00-99]/g,'');"
+              />
+            </div>
+            <div class="check" class="all">
+              <input
+                class="all"
+                type="text"
+                id="cvv"
+                placeholder="•••"
+                maxlength="3"
+                oninput="this.value=this.value.replace(/[^000-999]/g,'');"
+              />
+            </div>
+          </div>
+
+          <!-- <div class="infor">
+            Your card details will be saved securely for future transactions,
+            based on the industry standards.
+          </div> -->
+          <div class="makepayment">
+            <div class="paymentmake" onclick="makepayment()">
+              MAKE PAYMENT
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="totalprice" id="totalprice">
+          <!-- calculate the price -->
+        </div>
+
+        <!-- checkout -->
+        <div class="right" id="righ">
+          <div class="checkout">
+            <div class="checkoutbut">Payment Summary</div>
+            <div class="pament_summary">
+              <div>
+                <!-- <div id="cartname"> -->
+                <div>No. Of Items :</div>
+                <div id="item_no">0</div>
+              </div>
+              <div>
+                <div>Order Subtotal :</div>
+                <div id="total"></div>
+              </div>
+              <div>
+                <div>Discount :</div>
+                <div id="discount">0%</div>
+              </div>
+              <div>
+                <div>Tax (GST) :</div>
+                <div>+18%</div>
+              </div>
+              <div
+                style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px"
+              >
+                <div>Shipping :</div>
+                <div>Free Shipping</div>
+              </div>
+              <div>
+                <div>Order Total :</div>
+                <div id="ordertotal">0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+
+
+
+
+
+
     <div id="down"></div>
 </body>
 </html>
@@ -30,3 +178,5 @@
   let footer = document.getElementById("down");
   footer.innerHTML = foot();
 </script>
+<script src="../js/cardData.js"></script>
+<script src="../js/payment.js"></script>
