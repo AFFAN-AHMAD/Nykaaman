@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="" />
     <style>
       #cartDiv {
-        width: 450px;
-        height: 600px;
-        border: 1px solid red;
+        width: 30%;
+        height:auto;
+        /* border: 1px solid red; */
         float: right;
         background-color: whitesmoke;
       }
@@ -27,7 +27,7 @@
         display: flex;
         /* justify-content: center; */
       }
-      #shopping  h3 {
+      #shopping,#pay  h3 {
         /* border:1px solid red; */
         color:#134;
         text-align: center;
@@ -46,7 +46,7 @@
       #Maindivs {
         width: 100%;
         height: 200px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         margin-top: 10px;
       }
       #Maindivs img {
@@ -69,15 +69,67 @@
         justify-content: space-around;
       }
       #proceedDiv{
+        /* border:1px solid red; */
           width:100%;
-          height:50px;
-          bottom:0;
           background-color: #fff;
-          z-index: 1;
           display: flex;
-          justify-content: space-between
-          ;
+          justify-content: space-between;
+         
       }
+    
+     #details div{
+      display: flex;
+      height:30px;
+      margin: 0px 10px;
+      justify-content: space-between;
+      font-size: 20px;
+      line-height: 17px;
+      color:rgb(94, 92, 92)
+      ;
+     }
+     #details div div{
+      display: flex;
+      height:30px
+     }
+     #details{
+       background-color:#fff
+     }
+     #gt{
+       width:50%;
+       justify-content: space-between;
+       margin-left: 10px;
+       font-weight: bolder;
+       height:70px;
+       box-sizing: border-box;
+       margin-top:40px ;
+     }
+     #gt+div{
+      font-size: 24px;
+      font-weight: bolder;
+      text-align: center;
+      padding:20px 10px 0px 0px;
+      background-color: #285773;
+      width:50%;
+      height:70px;
+      margin-top:40px ;
+      box-sizing: border-box;
+      color:white
+     }
+     #gt p{
+      margin-bottom:-12px;
+      color:rgb(147, 143, 143)
+     }
+     #disc,#distotal{
+       color:#285773
+     }
+    #cartDiv{
+      opacity:0;
+      visibility:0;
+      z-index:0;
+    }
+    #cartDiv hr{
+      margin-top:30px
+    }
     </style>
   </head>
   <body>
@@ -93,16 +145,9 @@
             ></path>
           </svg>
         </button>
-        <h3>Shopping Bag</h3>
+        <h3 id="shoppingbag"></h3>
       </div>
       <div id="prodDetails">
-          <div id="proceedDiv">
-              <div>
-                  <p>Grand Total</p>
-                  <h4>3822</h4>
-              </div>
-              <div id="proceed" >Proceed ></div>
-          </div>
       </div>
     </div>
   </body>
@@ -128,7 +173,7 @@
 
   function displayCart(data) {
       
-    data.map(function (e) {
+   data.map(function (e,i) {
       let Maindiv = make("div");
       Maindiv.setAttribute("id", "Maindivs");
       let proDiv = make("div");
@@ -165,21 +210,31 @@
       let mrpDiv = make("div");
       mrpDiv.setAttribute("id", "mrpDiv");
       let mrp = make("p");
-      mrp.innerText = e.mrp;
+      mrp.innerText = `₹ ${e.mrp}`;
       mrpDiv.append(mrp);
       quantDiv.append(quantityDiv, mrpDiv);
       Maindiv.append(proDiv, quantDiv);
 
       prodDetailsDiv.append(Maindiv);
+      
     });
+
+    let s=select("#shoppingbag")
+    let c = 0;
+    data.forEach(function(e)
+    {
+      c++
+    })
+    s.innerHTML=`Shopping Bag(${c})`
 
     let paymentDiv = make("div");
     paymentDiv.innerHTML = `
-                <div><h3>Payment Details</h3></div>
+    
+                <div <div id="pay"><h3>Payment Details</h3></div></div>
                 <div id="details">
                     <div> <h5>Bag Total</h5> <h5 id="total"></h5>
                     </div>
-                    <div> <h5>Bag Discount</h5> <h5 id="distotal"></h5>
+                    <div> <h5 id="disc">Bag Discount</h5> <h5 id="distotal"></h5>
                     </div>
                     <div>
                         <h5>Sub Total</h5> <h5 id="subtotal"></h5>
@@ -188,11 +243,19 @@
                         <h5>Shipping Charge</h5>
                         <h5>Free</h5>
                     </div>
-                    <div>
+                    <div >
                         <h4>Grand Total</h4>
                         <h4 id="grandtotal"></h4>
                     </div>
-                </div>`;
+                </div>
+                <hr></hr>
+                <div id="proceedDiv">
+              <div id="gt">
+                  <p>Grand Total</p>
+                  <h4 id="gdtotal"></h4>
+              </div>
+              <div id="proceed" >Proceed ></div>
+          </div>`;
     prodDetailsDiv.append(paymentDiv);
 
     let amount = data.reduce(function (a, e) {
@@ -208,11 +271,38 @@
     console.log(amount);
     console.log(discountedprice);
 
-    select("#total").innerText = amount;
-    select("#distotal").innerText = `-${discountedprice}`;
-    select("#subtotal").innerText = subtotal;
-    select("#grandtotal").innerHTML = subtotal;
+    select("#total").innerText = `₹ ${amount}`;
+    select("#distotal").innerText = `-₹ ${discountedprice}`;
+    select("#subtotal").innerText =  `₹ ${subtotal}`;
+    select("#grandtotal").innerHTML = `₹ ${subtotal}`;
+    select("#gdtotal").innerHTML = `₹ ${subtotal}`;
+
   }
 
   displayCart(cartArr);
+
+
+  let cart = select("#cart")
+  let count=0
+  cart.addEventListener("click",function(){
+    count++
+    let cartDiv=select("#cartDiv");
+    if(count%2==1)
+    {
+      console.log(2)
+      cartDiv.style.opacity=1;
+      cartDiv.zIndex=2;
+    }
+    else{
+      cartDiv.style.opacity=0;
+      cartDiv.zIndex=0;
+    }
+
+  })
+
+  let proceedDiv = select("#proceed")
+  proceed.addEventListener("click",function()
+  {
+    window.location.href="../html/payment.html"
+  })
 </script>
