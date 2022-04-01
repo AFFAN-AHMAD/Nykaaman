@@ -62,8 +62,10 @@ h3 {
 }
 
 input:not(#btn) {
-    font-size: 30px;
+    font-size: 23px;
     justify-content: center;
+    margin-top: 5px;
+    padding: 33%;
 }
 
 #btn {

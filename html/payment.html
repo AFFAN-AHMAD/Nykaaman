@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Men’s Beard Care, Skincare &amp; Supplements At Best Prices in India |
-        Nykaa Man</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Buy Men’s Beard Care, Skincare &amp; Supplements At Best Prices in India |
+      Nykaa Man
+    </title>
     <link
       rel="icon"
       href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="../css/payment.css">
-</head>
-<body>
-  <div id="container"></div>
-  <div id="safety">
-    <div id="i"><p>i</p></div>
-    
-    <p>Please use a digital payment method & help us ensure contactless delivery for your safety</p>
-  </div>
-  <div id="methods">CHOOSE PAYMENT METHOD</div>
-  <div class="container">
+    <link rel="stylesheet" href="../css/payment.css" />
+  </head>
+  <body>
+
+    <!-- navbar -->
+    <div id="container"></div>
+
+    <!-- heading -->
+    <div id="safety">
+      <div id="i"><p>i</p></div>
+      <p>
+        Please use a digital payment method & help us ensure contactless
+        delivery for your safety
+      </p>
+    </div>
+    <div id="methods">CHOOSE PAYMENT METHOD</div>
+
+
+    <!-- < class="container"> -->
     <div class="middlecont">
-      <div class="left">
+
+      <div class="lleft">
         <div class="wallet">
-          <div class="wallets">
-            
-            <div class="cont-wal">WALLETS</div>
-          </div>
-          <!-- second -->
-          <div class="wallets">
-            
-            <div class="cont-wal">UPI</div>
-          </div>
-          <div class="wallets">
-            
-            <div class="cont-wal">CARDS</div>
-          </div>
-          <div class="wallets">
-            
-            <div class="cont-wal">NET BANKING</div>
-          </div>
-          <div class="wallets">
-            
-            <div class="cont-wal">PAY ON DELIVERY</div>
-          </div>
-        </div>
-        <div class="credicard">
-          <div class="upper">
-            <div class="creditdebit">Credit & Debit Cards</div>
-            <div class="addnew" style="color: black">
-              Add new Cards For Payment
-            </div>
+          
+          <div  id="db" class="wallets">
+            <div class="cont-wal">Credit/Debit Card</div>
           </div>
 
-          <div class="cardnamee" style="color: black">Card Number</div>
+          <div class="wallets">
+            <div class="cont-wal">UPI</div>
+          </div>
+
+          <div class="wallets">
+            <div class="cont-wal">GooglePay</div>
+          </div>
+
+          <div class="wallets">
+            <div class="cont-wal">Net Banking</div>
+          </div>
+
+          <div class="wallets">
+            <div class="cont-wal">Mobile Wallets</div>
+          </div>
+
+          <div class="wallets">
+            <div class="cont-wal">Cash on Delivery</div>
+          </div>
+
+          <div class="wallets">
+            <div class="cont-wal">Gift Card</div>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+      <div class="left">
+        <div class="credicard">
+          <div class="upper">
+            <div class="creditdebit">Credit/Debit Card</div>
+          </div>
           <div class="cardin">
             <input
               class="all"
               type="number"
-              placeholder="XXXXXXXXXXXX"
+              placeholder="Card Number"
               id="cardnum"
-              maxlength="9"
+              maxlength="16"
             />
           </div>
           <div class="expisc">
-            <div class="expiry" style="color: black">Expiry Date(MM/YY)</div>
-            <div class="securitycode" style="color: black">CVV</div>
+            <div class="expiry" style="color: black; font-size:17px; margin-top: 10px; margin-bottom: -20px;">Expiry</div>
+            
           </div>
-          <div class="secinp">
-            <div class="monthyear"></div>
-            <div class="cvv"></div>
-          </div>
+          
           <div class="namecard">
             <div id="datediv" style="display: flex; align-items: center">
               <input
@@ -98,36 +114,29 @@
                 class="all"
                 type="text"
                 id="cvv"
-                placeholder="•••"
+                placeholder="CVV"
                 maxlength="3"
                 oninput="this.value=this.value.replace(/[^000-999]/g,'');"
               />
             </div>
           </div>
-
-          <!-- <div class="infor">
-            Your card details will be saved securely for future transactions,
-            based on the industry standards.
-          </div> -->
           <div class="makepayment">
-            <div class="paymentmake" onclick="makepayment()">
-              MAKE PAYMENT
-            </div>
+            <div class="paymentmake" onclick="makepayment()">PAY NOW ></div>
           </div>
         </div>
       </div>
-      <div class="right">
-        <div class="totalprice" id="totalprice">
-          <!-- calculate the price -->
-        </div>
+
+
+      
+     
 
         <!-- checkout -->
         <div class="right" id="righ">
-          <div class="checkout">
+          <!-- <div class="checkout">
             <div class="checkoutbut">Payment Summary</div>
             <div class="pament_summary">
               <div>
-                <!-- <div id="cartname"> -->
+                
                 <div>No. Of Items :</div>
                 <div id="item_no">0</div>
               </div>
@@ -143,9 +152,7 @@
                 <div>Tax (GST) :</div>
                 <div>+18%</div>
               </div>
-              <div
-                style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px"
-              >
+              <div style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px">
                 <div>Shipping :</div>
                 <div>Free Shipping</div>
               </div>
@@ -154,27 +161,23 @@
                 <div id="ordertotal">0</div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-      </div>
+      
+
+
     </div>
-  </div>
-
-
-
-
-
 
     <div id="down"></div>
-</body>
+  </body>
 </html>
 
 <script type="module">
-    import nav from "../components/addnav.js"
-    let navbar = document.getElementById("container");
-    navbar.innerHTML = nav();
+  import nav from "../components/addnav.js";
+  let navbar = document.getElementById("container");
+  navbar.innerHTML = nav();
 
-    import foot from "../components/addfoot.js";
+  import foot from "../components/addfoot.js";
   let footer = document.getElementById("down");
   footer.innerHTML = foot();
 </script>
