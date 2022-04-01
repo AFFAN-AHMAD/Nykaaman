@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-      rel="icon"
-      href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png"
-      type="image/x-icon"
-    />
+     <title>Product Page</title>
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -74,6 +69,14 @@
 </body>
 </html>
 <script type="module">  
+  import {navbar,menu} from "../components/navbar.js";
+    import footermain from "../components/footer.js"
+    console.log("footermain",footermain)
+    let nav =  document.querySelector("#navbar")
+    let menus =  document.querySelector("#menu")
+    nav.innerHTML=navbar()
+    console.log("navbar",navbar)
+    menus.innerHTML=menu()
     
     let ulist = document.querySelector(".sort-0ul")
     let arrow = document.querySelector(".arrow-icon")
@@ -231,7 +234,7 @@
     // }
     //add to cart .
 
-     let cartArr = JSON.parse(localStorage.getItem('cartlocal')) || []
+     var cartArr = JSON.parse(localStorage.getItem('cartlocal')) || []
     function addtocart(ele){
         ele.quant = 1;
         cartArr.push(ele)
@@ -298,18 +301,31 @@
          console.log('name',data)
         //  window.location.href='product.html'
     }
-    import {navbar,menu} from "../components/navbar.js";
-    import footermain from "../components/footer.js"
-    console.log("footermain",footermain)
-    let nav =  document.querySelector("#navbar")
-    let menus =  document.querySelector("#menu")
-    menus.innerHTML=menu()
-    nav.innerHTML=navbar()
+  
+  
 
     let foot = document.querySelector("#footer")
     foot.innerHTML=footermain()
+
+    //product sort by CATEGORY
+
+function detaSort(event){
+  
+  let pdatabase = JSON.parse(localStorage.getItem("Nykaman")) || []
+  console.log("pdatabase",pdatabase)
+    localStorage.removeItem("Nykaman")
+    // console.log(event)
+  
+    sort = pdatabase.filter(function(el){
+      return el.cat.includes(event)
+    })
+    // console.log("dataaaaa",sort)
+    localStorage.setItem("Nykaman",JSON.stringify(sort))
+    window.location.href ="./html/product.html"
+  
+  }
    
 </script>
-<script src="../js/main.js"></script>
+<!-- <script src="../js/main.js"></script> -->
 
 <!-- <script src="../html/product.html"></script> -->
