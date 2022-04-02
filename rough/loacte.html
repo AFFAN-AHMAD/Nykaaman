@@ -167,6 +167,8 @@
   import { navbar } from "../components/navbar.js";
   let nav = select("#navbar");
   nav.innerHTML = navbar();
+
+  
   let prodDetailsDiv = select("#prodDetails");
 
   let cartArr = JSON.parse(localStorage.getItem("cartlocal")) || []
@@ -259,11 +261,11 @@
     prodDetailsDiv.append(paymentDiv);
 
     let amount = data.reduce(function (a, e) {
-      return a + e.mrp;
+      return a + (e.mrp*e.quant);
     }, 0);
 
     let discountedprice = data.reduce(function (a, e) {
-      return a + Math.floor((e.mrp * e.disc) / 100);
+      return a + Math.floor((e.mrp *e.quant* e.disc) / 100);
     }, 0);
 
     let subtotal = amount - discountedprice;

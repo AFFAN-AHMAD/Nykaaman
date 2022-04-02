@@ -1,0 +1,122 @@
+#cartDiv {
+    width: 30%;
+    height:auto;
+    /* border: 1px solid red; */
+    float: right;
+    background-color: whitesmoke;
+  }
+  #shopping {
+    width: 100%;
+    height: 60px;
+    margin-top: 0px;
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: center;
+    color: #bbb;
+    padding-top: -5px;
+    display: flex;
+    /* justify-content: center; */
+  }
+  #shopping,#pay  h3 {
+    /* border:1px solid red; */
+    color:#134;
+    text-align: center;
+  }
+  .back-btn {
+    margin-right: 150px;
+  }
+  .empty-bag-img {
+    text-align: center;
+    margin-top: 70px;
+  }
+  #prodDetails {
+    height: 700px;
+    overflow: scroll;
+  }
+  #Maindivs {
+    width: 100%;
+    height: 200px;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+  }
+  #Maindivs img {
+    width: 100%;
+    height: 100%;
+  }
+  #proDiv {
+    height: 70%;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+  }
+  #quantDiv {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  #quantityDiv {
+    display: flex;
+    justify-content: space-around;
+  }
+  #proceedDiv{
+    /* border:1px solid red; */
+      width:100%;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+     
+  }
+
+ #details div{
+  display: flex;
+  height:30px;
+  margin: 0px 10px;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 17px;
+  color:rgb(94, 92, 92)
+  ;
+ }
+ #details div div{
+  display: flex;
+  height:30px
+ }
+ #details{
+   background-color:#fff
+ }
+ #gt{
+   width:50%;
+   justify-content: space-between;
+   margin-left: 10px;
+   font-weight: bolder;
+   height:70px;
+   box-sizing: border-box;
+   margin-top:40px ;
+ }
+ #gt+div{
+  font-size: 24px;
+  font-weight: bolder;
+  text-align: center;
+  padding:20px 10px 0px 0px;
+  background-color: #285773;
+  width:50%;
+  height:70px;
+  margin-top:40px ;
+  box-sizing: border-box;
+  color:white
+ }
+ #gt p{
+  margin-bottom:-12px;
+  color:rgb(147, 143, 143)
+ }
+ #disc,#distotal{
+   color:#285773
+ }
+#cartDiv{
+  opacity:0;
+  visibility:0;
+  z-index:0;
+}
+#cartDiv hr{
+  margin-top:30px
+}
