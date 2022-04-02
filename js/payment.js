@@ -13,10 +13,10 @@ function pay() {
       year == carddetails[0].year &&
       cvv == carddetails[0].cvv
     ) {
-      alert("Payment Successful")
+      alert("OTP Sent To Registerd Mobile Number")
       location.replace("OTP.html");
     } else {
-      alert("Invalid Card Details");
+      alert("Invalid Card Details !");
     }
   }
   else{
