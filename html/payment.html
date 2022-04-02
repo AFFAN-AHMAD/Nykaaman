@@ -8,6 +8,36 @@
       Buy Men’s Beard Care, Skincare &amp; Supplements At Best Prices in India |
       Nykaa Man
     </title>
+
+    <style>
+      #payDiv{
+        width: 30%;
+        border: 1px solid black;
+        background-color: #fff;
+        
+      }
+      #pay{
+        width:100%;
+        height:50px;
+        border:1px solid red;
+        background-color: rgb(241, 241, 241);
+        text-align: center;
+      }
+      #details div{
+        display: flex;
+        justify-content: space-between;
+        padding:0px 20px
+      }
+      #disco{
+        color:darkslategray
+      }
+      #gt{
+        color:white;
+        background-color: darkslategray;
+        font-size: 20px;
+      }
+
+    </style>
     <link
       rel="icon"
       href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png"
@@ -129,37 +159,29 @@
       </div>
 
       <!-- checkout -->
-      <div class="right" id="righ">
-        <!-- <div class="checkout">
-            <div class="checkoutbut">Payment Summary</div>
-            <div class="pament_summary">
-              <div>
-                
-                <div>No. Of Items :</div>
-                <div id="item_no">0</div>
-              </div>
-              <div>
-                <div>Order Subtotal :</div>
-                <div id="total"></div>
-              </div>
-              <div>
-                <div>Discount :</div>
-                <div id="discount">0%</div>
-              </div>
-              <div>
-                <div>Tax (GST) :</div>
-                <div>+18%</div>
-              </div>
-              <div style="border-bottom: 1px solid #d5d9db; margin-bottom: 5px">
-                <div>Shipping :</div>
-                <div>Free Shipping</div>
-              </div>
-              <div>
-                <div>Order Total :</div>
-                <div id="ordertotal">0</div>
-              </div>
-            </div>
-          </div> -->
+      <div id="payDiv">
+        <div>
+          
+         <div id="pay"><h3>Payment Details</h3></div></div>
+         <div id="details">
+             <div> <h5>Bag Total</h5> <h5 id="total"></h5>
+             </div>
+             <div id="disco"> <h5 id="disc">Bag Discount</h5> <h5 id="distotal"></h5>
+             </div>
+             <div>
+                 <h5>Sub Total</h5> <h5 id="subtotal"></h5>
+             </div>
+             <div>
+                 <h5>Shipping Charge</h5>
+                 <h5>Free</h5>
+             </div>
+             <div id="gt">
+                 <h4>Grand Total</h4>
+                 <h4 id="grandtotal"></h4>
+             </div>
+        </div>
+        </div>
+       
       </div>
     </div>
 
@@ -175,6 +197,41 @@
   import foot from "../components/addfoot.js";
   let footer = document.getElementById("down");
   footer.innerHTML = foot();
+
+  const select=(id)=>{
+        return document.querySelector(id)
+    }
+    const make=(id)=>{
+        return document.createElement(id)
+    }
+
+  // payment details
+  var cartArr = JSON.parse(localStorage.getItem('cartlocal')) || []
+  console.log(cartArr)
+
+
+  function cartfun(data)
+  {
+    let amount = data.reduce(function (a, e) {
+    return a + (e.mrp*e.quant);
+  }, 0);
+
+  let discountedprice = data.reduce(function (a, e) {
+    return a + Math.floor((e.mrp *e.quant* e.disc) / 100);
+  }, 0);
+
+  let subtotal = amount - discountedprice;
+  console.log(subtotal);
+  console.log(amount);
+  console.log(discountedprice);
+
+  select("#total").innerText = `₹ ${amount}`;
+  select("#distotal").innerText = `-₹ ${discountedprice}`;
+  select("#subtotal").innerText =  `₹ ${subtotal}`;
+  select("#grandtotal").innerHTML = `₹ ${subtotal}`;
+  select("#gdtotal").innerHTML = `₹ ${subtotal}`;
+  }
+  cartfun(cartArr)
 </script>
 <script src="../js/cardData.js"></script>
 <script src="../js/payment.js"></script>
