@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../index.html">
 </head>
 <body >
     <div id="navbar"></div>
@@ -376,7 +377,6 @@
 
 
 
-
     // cart function
 
     const select=(id)=>{
@@ -388,6 +388,14 @@
     const removed=()=>{
      console.log("sbg")
  }
+
+
+ 
+ let logo = select("#logos")
+    logo.addEventListener("click",function()
+    {
+      window.location.href="../index.html"
+    })
 
  
  let prodDetailsDiv = select("#prodDetails");

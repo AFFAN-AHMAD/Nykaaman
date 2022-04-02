@@ -114,13 +114,8 @@ body {
 }
 
 #account {
-  border: 1px solid red;
+ 
   display: flex;
   width: 120px;
 }
-#searching {
-  border: 1px solid red;
-}
-#cart{
-  border:1px solid red
-}
+
