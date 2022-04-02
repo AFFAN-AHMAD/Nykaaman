@@ -111,10 +111,13 @@
     width:20%;
     padding: 10px;
 }
-.f211 svg{
+#f211svg{
     height:37px;
     width:72px;
     margin-bottom:20px;
+    /* fill: #fff; */
+    background-color: #fff;
+    margin-left: 39px;
     
 }
 
