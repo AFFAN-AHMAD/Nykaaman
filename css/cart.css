@@ -61,7 +61,10 @@
 }
 #quantityDiv {
   display: flex;
+  width:130px;
   justify-content: space-around;
+  text-align: center;
+  margin-left:-15px
 }
 #proceedDiv{
   /* border:1px solid red; */
@@ -155,5 +158,9 @@ line-height: 20px;
   color:rgb(52, 52, 52);;
   text-align: justify ;
   line-height: 25px;
+  margin-left:30px;
   font-style: italic;
+}
+.plus{
+  margin:15px 0px;
 }

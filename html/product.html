@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../index.html">
+    <script src="https://kit.fontawesome.com/0a03bfd4cc.js" crossorigin="anonymous"></script>
 </head>
 <body >
     <div id="navbar"></div>
@@ -265,7 +266,8 @@
         ele.quant = 1;
         cartArr.push(ele)
         console.log(cartArr)
-        localStorage.setItem('cartlocal',JSON.stringify(cartArr))
+        localStorage.setItem('cartlocal',JSON.stringify(cartArr));
+        window.reload
     }
 
     // sort functions
@@ -389,7 +391,16 @@
      console.log("sbg")
  }
 
+ function addquant(i)
+{
+       
+        displayCart(data)
 
+}
+function subquant(i)
+{
+       
+}
  
  let logo = select("#logos")
     logo.addEventListener("click",function()
@@ -403,7 +414,7 @@
 // let cartArr = JSON.parse(localStorage.getItem("cartlocal")) || []
 
 function displayCart(data) {
-    
+    prodDetailsDiv.innerHTML=null
  data.map(function (e,i) {
     let Maindiv = make("div");
     Maindiv.setAttribute("id", "Maindivs");
@@ -435,10 +446,38 @@ function displayCart(data) {
 
     let quantityDiv = make("div");
     quantityDiv.setAttribute("id", "quantityDiv");
-    let qty = make("p");
     
+    let plus = make("div");
+    plus.setAttribute("class","plus")
+    plus.innerText="+"
+    plus.addEventListener("click",function()
+    {
+        console.log(i)
+        data[i].quant++
+        console.log(data[i])
+        console.log(typeof(quant))
+
+        localStorage.setItem("cartlocal",JSON.stringify(data))
+        displayCart(data)
+    })
+    let minus = make("div");
+    minus.innerText ="-"
+    minus.setAttribute("class","plus")
+    minus.addEventListener("click",function()
+    {
+        console.log(i)
+        data[i].quant--
+        console.log(data[i])
+        localStorage.setItem("cartlocal",JSON.stringify(data))
+        // subquant(i)
+        displayCart(data)
+
+    })
+    let div = make("div")
+    let qty = make("p");
     qty.innerText = `Quantity ${e.quant}`;
-    quantityDiv.append(qty);
+    div.append(qty)
+    quantityDiv.append(plus,div,minus);
 
     let mrpDiv = make("div");
     mrpDiv.setAttribute("id", "mrpDiv");
@@ -511,36 +550,43 @@ function displayCart(data) {
 
 }
 
-displayCart(cartArr);
 
 
 let cart = select("#cart")
 let counter=0
 cart.addEventListener("click",function(){
+    window.reload
   counter++
   let cartDiv=select("#cartDiv");
+  let pro = select("#product")
   if(counter%2==1)
   {
     console.log(2)
     cartDiv.style.opacity=1;
-    cartDiv.zIndex=10;
+   
     cartDiv.style.backgroundColor="whitesmoke";
     cartDiv.style.display="block"
+    pro.style.display="none";
+    displayCart(cartArr);
+    let proceedDiv = select("#proceed")
+    proceedDiv.addEventListener("click",function()
+    {
+    window.location.href="../html/address.html"
+    })
+        
+    
   }
   else{
     cartDiv.style.opacity=0;
     cartDiv.zIndex=0;
     cartDiv.style.display="none"
+    pro.style.display="block"
+
   }
 
 })
 
-let proceedDiv = select("#proceed")
-proceed.addEventListener("click",function()
-{
-  window.location.href="../html/address.html"
-})
-        
+   
 </script>
 
 <!-- <script src="../js/d.js"></script> -->
