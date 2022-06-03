@@ -47,10 +47,6 @@ We focused on the functionality that we were able to build.
   <li>Zoom for meets</li>
 </ul>
 
-
-
-
-
 Problem faced during construct week
 As this was the second big project we were building, we faced fewer problems like using new components, adjusting to using Github, etc., but we all managed to use them correctly in a short time. We had some minor issues while merging the codes, but we could fix those with proper communication and guidance from our instructor.
 Here’s a link to the GitHub page if you want to visit:-
