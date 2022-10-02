@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Buy Men’s Beard Care, Skincare &amp; Supplements At Best Prices in India |
+      Nykaa Man
+    </title>
+
+    <link
+      rel="icon"
+      href="//www.nykaaman.com/skin/frontend/nykaa/men/desktop/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/address.css" />
+  </head>
+
+  <body>
+    <div id="container"></div>
+
+    <div id="middle">
+      <div id="left">
+        <div class="ad">Saved Address</div>
+        <div class="ad">New Address</div>
+      </div>
+      <div class="middle">
+        <div class="address">New Address</div>
+
+        <p class="p">select Country</p>
+        <p id="country" class="p">India</p>
+
+        <div class="customer">
+          <input type="text" class="flat" placeholder="Name" id="name" />
+        </div>
+
+        <div class="email">
+          <input type="email" class="flat1" placeholder="Email" id="email" />
+        </div>
+
+        <div class="digit">
+          <p class="tell" class="flato" class="p">Phone Number</p>
+
+          <input type="tell" placeholder="" id="phone" />
+        </div>
+
+        <div class="pincode">
+          <input class="tell" type="tel" class="flato" placeholder="Postal Code" id="pin" />
+        </div>
+
+        <div class="locality">
+          <input type="text" minlength="5" class="flat" placeholder="Address" id="locality" />
+        </div>
+        <div></div>
+
+        <button onclick="saveData()"><b>SHIP TO THIS ADDRESS ></b></button>
+      </div>
+
+      <div id="right">
+        <!-- Cart Data -->
+      </div>
+    </div>
+    <div id="down"></div>
+  </body>
+</html>
+
+<script type="module">
+  import nav from "../components/addnav.js";
+  let navbar = document.getElementById("container");
+  navbar.innerHTML = nav();
+
+  import foot from "../components/addfoot.js";
+  let footer = document.getElementById("down");
+  footer.innerHTML = foot();
+</script>
+
+<script src="../js/address.js"></script>
+

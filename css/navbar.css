@@ -1,0 +1,121 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+  width: 100%;
+  height: 105px;
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+
+#navbar section.sec1 {
+  /* border: 1px solid yellow; */
+  height: 40px;
+  background-color: #143243;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding:10px 70px 0px 70px;
+  position:sticky;
+  top:0px
+}
+#navbar section.sec1 > div:nth-child(2) {
+  display: flex;
+  width: 12%;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.navicon {
+  fill: #285773;
+  width: 15px;
+  height: 15px;
+  /* margin-right: 0px; */
+}
+
+.navicon1 {
+  fill: #285773;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+#navbar section.sec2 {
+  /* border: 1px solid blue; */
+  display: flex;
+  height: 65px;
+  position: sticky;
+  justify-content: space-around;
+}
+#navbar section.sec2 > div:nth-child(2) {
+  display: flex;
+  width: 40%;
+  font-size: 16px;
+  justify-content: space-around;
+  color: 03021a;
+  font-weight: 550;
+  box-sizing: border-box;
+  padding-right: 100px;
+}
+#navbar section.sec2 > div:nth-child(2) > p {
+  color: #143243;
+  padding-top: 15px;
+  /* line-height:62px */
+}
+#navbar section.sec2 > div:nth-child(2) > p:hover {
+  color: #066b8c;
+}
+.logo {
+  margin-left: 50px;
+}
+#navbar section.sec2 > div:nth-child(3) {
+  margin-top: 15px;
+  display: flex;
+  background-color: rgb(235, 235, 235);
+  height: 38px;
+  /* width:150px; */
+  text-align: center;
+  justify-items: center;
+}
+#navbar section.sec2 > div:nth-child(3) > input {
+  background-color: rgb(235, 235, 235);
+  border: none;
+}
+.searchicon {
+  padding-top: 7px;
+}
+#navbar section.sec2 > div:nth-child(4) {
+  display: flex;
+  width: 150px;
+  /* border: 1px solid #066B8c; */
+  height: 30px;
+  margin-right: 15px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#navbar section.sec2 > div:nth-child(4) > div:first-child {
+  display: flex;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+#navbar + hr {
+  height: 2px;
+  margin-top: 0px;
+}
+
+#account {
+ 
+  display: flex;
+  width: 120px;
+}
+

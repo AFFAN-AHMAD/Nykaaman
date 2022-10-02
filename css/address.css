@@ -1,0 +1,223 @@
+* {
+    font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  /* nav-bar */
+  body {
+    background: #f3f3f3;
+  }
+  
+  #container {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  }
+  
+  #nav {
+    /* background-color: #ffffff; */
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+  }
+  
+  .logo {
+      width: 85px;
+      /* margin-left: 20px; */
+    }
+    /* .logo > img {
+    max-width: 200%;
+  } */
+  
+  .second {
+      display: flex;
+      /* margin-left: 100px; */
+      /* font-size: ; */
+    }
+  
+  .cart {
+    margin-left: 70px;
+    width: 150px;
+    padding: 20px;
+    font-size: 17px;
+    /* gap: 2px; */
+    border: 1px solid #ebebeb;
+    border-top: none;
+    border-bottom: none;
+    font-weight: 600;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .ordersummary {
+    /* margin-left: 10px; */
+    width: 150px;
+    padding: 20px;
+    /* padding-top: 20px; */
+    border: 1px solid #ebebeb;
+    border-top: none;
+    border-bottom: 3px solid #003243;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  .payment {
+    /* margin-left: 10px; */
+    width: 150px;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    border: 1px solid #ebebeb;
+    border-top: none;
+    border-bottom: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  
+  #middle{
+    display: flex;
+    justify-content: center;
+  }
+  
+  #left{
+      background-color: white;
+      width: 15%;
+      /* margin: auto; */
+      box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+      padding: 1%;
+      border-radius: 0 0 3px 3px;
+      height: 70px;
+  }
+  .ad{
+    height: 40px;
+    font-size: 18px;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  /* #right{
+    background-color: white;
+    width: 15%;
+    margin: auto;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+    padding: 1%;
+    border-radius: 0 0 3px 3px;
+    height: 70px;
+  } */
+  
+  .middle {
+      background-color: white;
+      width: 25%;
+      /* margin: auto; */
+      margin-left: 10px;
+      box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+      padding: 1%;
+      border-radius: 0 0 3px 3px;
+    }
+    
+    input {
+      font-size: 17px;
+      padding: 5px;
+      /* border-width: 0px; */
+      border: none;
+      outline: none;
+      opacity: 0.8;
+      width: 97%;
+    }
+  
+    .address {
+      /* width: 70%; */
+      font-size: 18px;
+      border-bottom: 1px solid #ebebeb;
+      margin-bottom: 30px;
+      padding-bottom: 5px;
+    }
+  
+    .p{
+      padding-left: 3px;
+      opacity: 0.6;
+      margin-bottom: -1px;
+    }
+  
+  #country {
+    font-size: 18px;
+    padding-left: 3px;
+    opacity: 0.8;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 5px;
+    margin-top: 6px;
+  }
+  
+   .customer {
+    margin-top: 30px;
+    border-bottom: 1px solid #ebebeb;
+  } 
+  
+  .email{
+    margin-top: 30px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  .digit {
+    margin-top: 30px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  .pincode {
+    margin-top: 30px;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  #locality{
+    margin-top: 40px;
+    height: 70px;
+    border: 1px solid #ebebeb;
+    padding: 5px;
+  }
+  
+  button{
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    background: #003243;
+    color: white;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  #down{
+    display: flex;
+    /* margin: auto; */
+    /* justify-content: space-between; */
+    justify-content: center;
+    margin-top: 70px;
+    opacity: 0.8;
+    font-size: 11px;
+  }
+  h2{
+    color: #3f414d;
+  }
+  .gen{
+    display: flex;
+    width: 400px;
+    gap: 10px;
+    /* justify-content: space-between; */
+  }
+  img{
+    width: 14%;
+    height: 90%;
+    border-radius: 50%;
+    background: #8c8d94;
+  }
+  
+  #l{
+    margin-left: 200px;
+  }
+  #r{
+    margin-right: 200px;
+  }
+
+ 

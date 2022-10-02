@@ -1,0 +1,493 @@
+#body1{
+    
+    background-color: #F5F5F5;
+   margin-left: 10px;
+  
+}
+
+.slider{
+    position: relative;
+    margin-top: 10px;
+    }
+    /* slideshw end */
+    
+    /* main slider css */
+    #sf-Container {
+        /* border: 3px solid black; */
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+        height: 360px;
+        position: relative;
+        border-radius: 6px;
+      }
+      #sf-Slider {
+        width: 1000%;
+        height: 100%;
+        list-style: none;
+        /* border: 3px solid red; */
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s ease;
+      }
+    
+      #sf-Container .sf-SliderBox {
+        height: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 0px 5px;
+        /* border: 2px solid mediumseagreen; */
+      }
+    
+      .sf-SliderBox:hover {
+        box-shadow: 0 0px 5px 5px rgb(0 0 0 / 22%);
+        border-radius: 3px;
+      }
+      #leftButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        left: 8px;
+      }
+      #rightButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        right: 8px;
+      }
+     
+      .fitimgDiv{
+        width: 1500px;
+        height: 170px;
+    
+      }
+      .fitimgDiv>img{
+        width: 100%;
+        border-radius: 6px;
+      }
+
+      /* one slider end */
+      #slam{
+          text-align: center;
+          color: rgb(43, 42, 42);
+      }
+      
+
+      #brandsgrid{
+        display: grid;
+        width: 90%;
+        /* border: 1px solid red; */
+        margin-left: 60px;
+    
+        grid-template-columns: repeat(2,49%);
+        
+        grid-gap:2%;
+        margin-bottom: 5%; 
+      }
+      #brandsgrid>div{
+        border-radius: 5px;
+        background-color: rgb(243, 234, 234);
+       
+       
+      }
+      .imagewrap img{
+        width: 100%;
+        height: 85%;
+    } 
+    .imagewrap span{
+        margin-left: 220px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    .onhover:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
+    }
+    #top{
+        margin-top: 80px;
+        text-align: center;
+        color: rgb(75, 73, 73);
+    }
+
+    #topcat {
+        display: grid;
+        width: 92%;
+        margin-left: 40px;
+        grid-template-columns: repeat(4,24%);
+        /* grid-template-rows: repeat(2,100px); */
+        grid-gap: 15px;
+        /* background-color: bisque;    */
+        justify-content: space-around;
+        
+    }  
+    .types{
+        background-color: white;
+        width: 290px;
+        border: 0.5px solid lightgray;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: rgb(148, 73, 73);
+        /* background-color: aqua; */
+        /* padding-left: 3%; */
+    }
+    #focus{
+        text-align: center;
+        color: rgb(85, 82, 82);
+        margin-top: 50px;
+    }
+    #div1{
+        margin-left: 60px;
+        width:1200px;
+        border-radius: 10px;
+    }
+    #div1>img{
+        border-radius: 10px;
+        height: 100%;
+    }
+
+    /* 2nd slider csss */
+
+    #sf-Container1 {
+        margin-top: 30px;
+        /* margin: auto; */
+        overflow: hidden;
+        width: 89%;
+        height: 300px;
+        position: relative;
+        margin-left: 65px;
+      }
+      #sf-Slider1 {
+        width: 1000%;
+        height: 100%;
+        list-style: none;
+        /* border: 3px solid red; */
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        transition: all 0.50s ease;
+      }
+      #sf-Container1 .sf-SliderBox1 {
+        height: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 0px 5px;
+        /* border: 2px solid mediumseagreen; */
+      }
+    
+      .sf-SliderBox1:hover {
+        box-shadow: 0 0px 5px 5px rgb(0 0 0 / 22%);
+        border-radius: 3px;
+      }
+      #leftButton1{
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        left: 8px;
+      }
+      #rightButton1{
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        right: 8px;
+      }
+
+      #special{
+          text-align: center;
+          color: rgb(73, 70, 70);
+      }
+      #specialgrid{
+          display: grid;
+          grid-template-columns: repeat(2,46%);
+          gap: 10px;
+          
+      }
+      #specialgrid>div{
+          margin-left: 50px;
+      }
+      .wheel{
+        margin-left: 60px;
+        margin-top: 30px;
+      }
+
+      #sf3-Container {
+        /* border: 3px solid black; */
+        margin: auto;
+        overflow: hidden;
+        width: 85%;
+        height: 300px;
+        margin-top: 60px;
+        position: relative;
+      }
+      #sf3-Slider {
+        width: 1000%;
+        height: 100%;
+        list-style: none;
+        /* border: 3px solid red; */
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s ease;
+      }
+    
+      #sf3-Container .sf3-SliderBox {
+        height: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 0px 5px;
+        /* border: 2px solid mediumseagreen; */
+      }
+    
+      .sf3-SliderBox:hover {
+        box-shadow: 0 0px 5px 5px rgb(0 0 0 / 22%);
+        border-radius: 3px;
+      }
+      #sf3-leftButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        left: 8px;
+      }
+      #sf3-rightButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        right: 8px;
+      }
+      #sf3-Container + h2{
+          color: black;
+          margin:20px auto  20px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: normal;
+      }
+      #category{
+        text-align: center;
+        color: rgb(70, 68, 68);
+      }
+      .onhover4{
+        margin-left: 60px;
+      }
+      /* slider 4 start */
+      #sf4-Container {
+        /* border: 3px solid black; */
+        margin: auto;
+        overflow: hidden;
+        width: 87%;
+        height: 300px;
+        position: relative;
+        margin-right: 100px;
+        margin-top: 20px;
+        
+        }
+        #sf4-Slider {
+        width: 1000%;
+        height: 100%;
+        list-style: none;
+        /* border: 3px solid red; */
+        position: relative;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        transition: all 0.5s ease;
+        }
+        
+        #sf4-Container .sf4-SliderBox {
+        height: 100%;
+        cursor: pointer;
+        float: left;
+        margin: 0px 5px;
+        /* border: 2px solid mediumseagreen; */
+        }
+        
+        .sf4-SliderBox:hover {
+        box-shadow: 0 0px 5px 5px rgb(0 0 0 / 22%);
+        border-radius: 3px;
+        }
+        #sf4-leftButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        left: 8px;
+        }
+        #sf4-rightButton {
+        height: 56px;
+        width: 56px;
+        top: 45%;
+        position: absolute;
+        cursor: pointer;
+        right: 8px;
+        }
+        #sf4-Container + h2{
+          color: black;
+          margin:20px auto  20px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: normal;
+        }
+        #knock{
+          text-align: center;
+          color: rgb(77, 74, 74);
+          margin-top: 40px;
+        }
+
+        #V-featured-brands {
+          display: grid;
+          grid-template-columns: repeat(4, 24%);
+          gap: 2%;
+          justify-content: center;
+          width: 90%;
+          margin: auto;
+        }
+        #V-featured-brands > div {
+          width: 100%;
+          /* border: 1px solid black;  */
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+        }
+        #V-featured-brands > div:hover {
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+            rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+        
+        #V-featured-brands > div > img {
+          width: 100%;
+          border-radius: 3px;
+        }
+        #V-featured-brands > div > p {
+          font-size: 17px;
+          margin: 10px 0px;
+          text-align: center;
+          font-weight: normal;
+        }
+        #bro{
+          text-align: center;
+          color: rgb(66, 64, 64);
+          margin-top: 60px;
+        }
+        #guidediv{
+          display: flex;
+          gap: 15px;
+          margin-left: 60px;
+        }
+        #guidediv>div:hover{
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+        }
+        #kits{
+          text-align: center;
+          color: rgb(70, 67, 67);
+          margin-top: 45px;
+        }
+
+        #GroomingAdvContainer{
+          width: 80%;
+          border: 1px solid transparent;
+          margin: auto;
+          margin-top: 0px;
+      }
+      #GroomingAdvImgsDiv{
+          border: 1px solid transparent;
+          margin: auto;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 49%);
+          /* border: 2px solid red; */
+          gap: 15px;
+      }
+      .groomingAdvImgsC_div{
+          width: 100%;
+          height: fit-content;
+          border: 1px solid transparent;
+          box-shadow:rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      .groomingAdvImgsC_div:hover{
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .groomingAdvPara{
+          text-align: center;
+          font-size: 16px;
+          font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+          line-height: 19px;
+          font-weight: 400;
+      }
+
+      #newLaunchesPara{
+        margin-top: 3%;
+        margin-left: 41%;
+        font-family: "Source Sans Pro", Roboto, Arial, sans-serif;
+        color: #3f414d;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    #newLaunchesGImgsDiv{
+        /* margin-left: 1%; */
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 22%);
+        gap: 20px;
+        border: 1px solid transparent;
+    }
+    #NewLaunchesContainer{
+        width: 85%;
+        border: 1px solid transparent;
+        margin: auto;
+        margin-left: 10%;
+    }
+    .newLaunchImgs{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 3px;
+    }
+    .newLaunchImgs:hover{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    #newLaunchesGImgsDiv2{
+        border: 1px solid transparent;
+        margin-top: 3%;
+        /* width:fit-content; */
+        margin-left: -60px;
+    }
+    #newLaunchesGImgsDiv3{
+        margin-top: 3%;
+        margin-left: -60px;
+
+    }
+    #scrollTop {
+      position: fixed;
+      height: 50px;
+      width: 50px;
+      outline: none;
+      border: none;
+      box-shadow: rgba(97, 86, 86, 0.25) 0px 1px 4px 0px;
+      cursor: pointer;
+      background-color: rgb(255, 255, 255);
+      padding: 0px;
+      bottom: 60px;
+      right: 15px;
+      /* z-index: 101; */
+      /* visibility: hidden; */
+      /* border: 2px solid black; */
+      /* cursor: pointer; */
+      border-radius: 50px;
+    }
+      
+
+
+      
+

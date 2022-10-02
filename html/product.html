@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../index.html">
+    <script src="https://kit.fontawesome.com/0a03bfd4cc.js" crossorigin="anonymous"></script>
+</head>
+<body >
+    <div id="navbar"></div>
+    <hr></hr>
+    <div id="menu"></div>
+
+    <!-- cart -->
+    
+    <div id="cartDiv">
+        <div id="shopping">
+          <button type="button" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21">
+              <path
+                fill="#FC2779"
+                fill-rule="evenodd"
+                d="M3.605 10.417l8.242-8.243a.503.503 0 0 0 .005-.71l-1.32-1.32a.505.505 0 0 0-.71.004L.148 9.82a.506.506 0 0 0-.09.597.506.506 0 0 0 .09.597l9.672 9.672c.195.194.516.2.71.004l1.32-1.32a.503.503 0 0 0-.004-.71l-8.242-8.243z"
+              ></path>
+            </svg>
+          </button>
+          <h3 id="shoppingbag"></h3>
+        </div>
+        <div id="prodDetails">
+        </div>
+      </div>
+
+
+    <div id="product">
+        <div id="list-wrapper">
+            <!-- filter-div -->
+            <div id="filters">
+                <!-- filter-sort -->
+                <div id="filtersort">
+                    <div class="filtersort-inside">
+                        <div class="sort-0">
+                            <button class="sort-0-button">
+                                <span class="sort-name" id="sort-namely">Sort By : discount</span>
+                                    <svg class="arrow-icon" width="13" height="7" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.499978 1.24994C0.499217 1.11833 0.524442 0.98787 0.574206 0.866033C0.623971 0.744195 0.697298 0.633379 0.789979 0.539939C0.882942 0.446211 0.993542 0.371816 1.1154 0.321048C1.23726 0.270279 1.36797 0.244141 1.49998 0.244141C1.63199 0.244141 1.7627 0.270279 1.88455 0.321048C2.00641 0.371816 2.11701 0.446211 2.20998 0.539939L6.99998 5.33994L11.79 0.539939C11.9836 0.351635 12.2441 0.247954 12.5141 0.251705C12.7842 0.255456 13.0417 0.366331 13.23 0.559939C13.4183 0.753547 13.522 1.01403 13.5182 1.28408C13.5145 1.55413 13.4036 1.81164 13.21 1.99994L7.70998 7.49994C7.61702 7.59367 7.50641 7.66806 7.38456 7.71883C7.2627 7.7696 7.13199 7.79574 6.99998 7.79574C6.86797 7.79574 6.73726 7.7696 6.6154 7.71883C6.49354 7.66806 6.38294 7.59367 6.28998 7.49994L0.789979 1.99994C0.692368 1.9018 0.616191 1.78447 0.566272 1.65537C0.516353 1.52627 0.493779 1.38821 0.499978 1.24994Z" fill=""></path>
+                                    </svg>
+                            </button>
+                            <ul class="sort-0ul">
+                               
+                                <!-- discount -->
+                                <div class="sort-0ul-li"><input id="radio_discount_undefined" type="radio" checked=""><label class="control-radio" for="radio_discount_undefined"><div class="control-value"><span class="i" id='discount'>discount</span></div><div id="discountid" class="control-indicator-radio"></div></label>
+                                </div>
+                                <!-- name -->
+                                <div class="sort-0ul-li"><input id="radio_name_undefined" type="radio"><label class="control-radio" for="radio_name_undefined"><div class="control-value"><span class="title">name</span></div><div id="nameA" class="control-indicator-radio "></div></label>
+                                </div>
+                               
+                                <!-- price-high-to-low -->
+                                <div class="sort-0ul-li"><input id="radio_price-high-to-low_undefined" type="radio"><label class="control-radio" for="radio_price: high to low_undefined"><div class="control-value"><span class="title">price: high to low</span></div><div id="htol" class="control-indicator-radio "></div></label>
+                                </div>
+                                <!-- price-low-to-high -->
+                                <div class="sort-0ul-li"><input id="radio_price-low-to-high_undefined" type="radio"><label class="control-radio" for="radio_price: low to high_undefined"><div class="control-value"><span class="title">price: low to high</span></div><div id="ltoh" class="control-indicator-radio "></div></label>
+                                </div>
+                                 <!-- popularity -->
+                                 <div class="sort-0ul-li"><input id="radio_popularity_undefined" type="radio"><label class="control-radio" for="radio_popularity_undefined"><div class="control-value"><span class="title">popularity</span></div><div class="control-indicator-radio "></div></label>
+                                </div>
+                                 <!-- customer-top-rated -->
+                                 <div class="sort-0ul-li"><input id="radio_customer-top-rated_undefined" type="radio"><label class="control-radio" for="radio_customer top rated_undefined"><div class="control-value"><span class="title"i>customer top rated</span></div><div class="control-indicator-radio "></div></label>
+                                </div>
+                                
+                                <!-- new-arrival -->
+                                <div class="sort-0ul-li"><input id="radio_new-arrivals_undefined" type="radio"><label class="control-radio" for="radio_new arrivals_undefined"><div class="control-value"><span class="title">new arrivals</span></div><div class="control-indicator-radio "></div></label>
+                                </div>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- product-listing-div -->
+            <div class="pl">
+                <div class="plw">
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module">  
+    import {navbar,menu} from "../components/navbar.js";
+    import footermain from "../components/footer.js"
+    console.log("footermain",footermain)
+    let nav =  document.querySelector("#navbar")
+    let menus =  document.querySelector("#menu")
+    nav.innerHTML=navbar()
+    console.log("navbar",navbar)
+    menus.innerHTML=menu()
+    
+    let ulist = document.querySelector(".sort-0ul")
+    let arrow = document.querySelector(".arrow-icon")
+    let container = document.querySelector(".plw")
+    console.log(container,"container")
+    console.log("arr",arrow)
+
+    arrow.addEventListener("click",function(){
+        arrowkamal()
+    })
+    
+    var count=0
+    function arrowkamal(){
+        count++
+        if(count%2==1){
+            arrow.style.transform = "rotate(180deg)";
+            ulist.style.display = "block"
+        }
+        else{
+            arrow.style.transform = "rotate(360deg)";
+            ulist.style.display = "none"
+        }
+        
+    }
+
+    //prodictlayout
+    let data = JSON.parse(localStorage.getItem("Nykaman")) || []
+    console.log(data,"data")
+    
+
+    appendd(data)
+    function appendd(data){
+        container.innerHTML= null
+        data.forEach(function(ele){
+            let d1 = document.createElement('div')
+            d1.setAttribute('class',"plwd1")
+
+            let d2 = document.createElement('div')
+            d2.setAttribute('class',"plwd2")
+
+            let d3 = document.createElement('div')
+            d3.setAttribute('class',"plwd3")
+
+            let d4 = document.createElement('div')
+            d4.setAttribute('class',"plwd4")
+            let img = document.createElement('img')
+            img.src = ele.img
+
+            let d5 = document.createElement('div')
+            d5.setAttribute('class',"plwd5")
+
+            let d6 = document.createElement('div')
+            d6.setAttribute('class',"plwd6")
+            d6.innerText= ele.name 
+
+            let d7 = document.createElement('div')
+            d7.setAttribute('class',"plwd7")
+            let s1 = document.createElement('span')
+            s1.setAttribute('class',"plws1")
+            s1.innerText = `MRP:    ${ele.mrp}`
+            let s2 = document.createElement('span')
+            s2.setAttribute('class',"plws2")
+            s2.innerText = `MRP:${ele.mrp}`
+            let s3 = document.createElement('span')
+            s3.setAttribute('class',"plws3")
+            s3.innerText = `${ele.disc}% Off`
+
+          
+            let d8 = document.createElement('div')
+            d8.setAttribute('class',"plwd8")
+
+            let s18 = document.createElement('div')
+            s18.setAttribute('class',"plws18")
+            s18.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.42L6.25 21.54C6.1816 21.5921 6.09823 21.6207 6.01227 21.6217C5.9263 21.6227 5.8423 21.596 5.77272 21.5455C5.70314 21.495 5.65169 21.4234 5.62598 21.3413C5.60027 21.2593 5.60168 21.1712 5.63 21.09L7.77 14.35L2.08 10.15C2.01515 10.0984 1.96747 10.0283 1.94325 9.94905C1.91902 9.86979 1.91938 9.78505 1.94429 9.706C1.9692 9.62695 2.01747 9.5573 2.08276 9.50624C2.14805 9.45518 2.22728 9.42511 2.31 9.41999L9.38 9.36999L11.62 2.65999C11.6463 2.57996 11.6972 2.51028 11.7654 2.46088C11.8337 2.41148 11.9158 2.38489 12 2.38489C12.0842 2.38489 12.1663 2.41148 12.2346 2.46088C12.3028 2.51028 12.3537 2.57996 12.38 2.65999L14.62 9.36999L21.69 9.41999C21.7727 9.42511 21.852 9.45518 21.9172 9.50624C21.9825 9.5573 22.0308 9.62695 22.0557 9.706C22.0806 9.78505 22.081 9.86979 22.0568 9.94905C22.0325 10.0283 21.9848 10.0984 21.92 10.15L16.23 14.35L18.37 21.09C18.3983 21.1712 18.3997 21.2593 18.374 21.3413C18.3483 21.4234 18.2969 21.495 18.2273 21.5455C18.1577 21.596 18.0737 21.6227 17.9877 21.6217C17.9018 21.6207 17.8184 21.5921 17.75 21.54L12 17.42Z" fill="black"></path></svg>`
+            let s28 = document.createElement('div')
+            s28.setAttribute('class',"plws18")
+            s28.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.42L6.25 21.54C6.1816 21.5921 6.09823 21.6207 6.01227 21.6217C5.9263 21.6227 5.8423 21.596 5.77272 21.5455C5.70314 21.495 5.65169 21.4234 5.62598 21.3413C5.60027 21.2593 5.60168 21.1712 5.63 21.09L7.77 14.35L2.08 10.15C2.01515 10.0984 1.96747 10.0283 1.94325 9.94905C1.91902 9.86979 1.91938 9.78505 1.94429 9.706C1.9692 9.62695 2.01747 9.5573 2.08276 9.50624C2.14805 9.45518 2.22728 9.42511 2.31 9.41999L9.38 9.36999L11.62 2.65999C11.6463 2.57996 11.6972 2.51028 11.7654 2.46088C11.8337 2.41148 11.9158 2.38489 12 2.38489C12.0842 2.38489 12.1663 2.41148 12.2346 2.46088C12.3028 2.51028 12.3537 2.57996 12.38 2.65999L14.62 9.36999L21.69 9.41999C21.7727 9.42511 21.852 9.45518 21.9172 9.50624C21.9825 9.5573 22.0308 9.62695 22.0557 9.706C22.0806 9.78505 22.081 9.86979 22.0568 9.94905C22.0325 10.0283 21.9848 10.0984 21.92 10.15L16.23 14.35L18.37 21.09C18.3983 21.1712 18.3997 21.2593 18.374 21.3413C18.3483 21.4234 18.2969 21.495 18.2273 21.5455C18.1577 21.596 18.0737 21.6227 17.9877 21.6217C17.9018 21.6207 17.8184 21.5921 17.75 21.54L12 17.42Z" fill="black"></path></svg>`
+            let s38 = document.createElement('div')
+            s38.setAttribute('class',"plws18")
+            s38.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.42L6.25 21.54C6.1816 21.5921 6.09823 21.6207 6.01227 21.6217C5.9263 21.6227 5.8423 21.596 5.77272 21.5455C5.70314 21.495 5.65169 21.4234 5.62598 21.3413C5.60027 21.2593 5.60168 21.1712 5.63 21.09L7.77 14.35L2.08 10.15C2.01515 10.0984 1.96747 10.0283 1.94325 9.94905C1.91902 9.86979 1.91938 9.78505 1.94429 9.706C1.9692 9.62695 2.01747 9.5573 2.08276 9.50624C2.14805 9.45518 2.22728 9.42511 2.31 9.41999L9.38 9.36999L11.62 2.65999C11.6463 2.57996 11.6972 2.51028 11.7654 2.46088C11.8337 2.41148 11.9158 2.38489 12 2.38489C12.0842 2.38489 12.1663 2.41148 12.2346 2.46088C12.3028 2.51028 12.3537 2.57996 12.38 2.65999L14.62 9.36999L21.69 9.41999C21.7727 9.42511 21.852 9.45518 21.9172 9.50624C21.9825 9.5573 22.0308 9.62695 22.0557 9.706C22.0806 9.78505 22.081 9.86979 22.0568 9.94905C22.0325 10.0283 21.9848 10.0984 21.92 10.15L16.23 14.35L18.37 21.09C18.3983 21.1712 18.3997 21.2593 18.374 21.3413C18.3483 21.4234 18.2969 21.495 18.2273 21.5455C18.1577 21.596 18.0737 21.6227 17.9877 21.6217C17.9018 21.6207 17.8184 21.5921 17.75 21.54L12 17.42Z" fill="black"></path></svg>`
+            let s48 = document.createElement('div')
+            s48.setAttribute('class',"plws18")
+            s48.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.42L6.25 21.54C6.1816 21.5921 6.09823 21.6207 6.01227 21.6217C5.9263 21.6227 5.8423 21.596 5.77272 21.5455C5.70314 21.495 5.65169 21.4234 5.62598 21.3413C5.60027 21.2593 5.60168 21.1712 5.63 21.09L7.77 14.35L2.08 10.15C2.01515 10.0984 1.96747 10.0283 1.94325 9.94905C1.91902 9.86979 1.91938 9.78505 1.94429 9.706C1.9692 9.62695 2.01747 9.5573 2.08276 9.50624C2.14805 9.45518 2.22728 9.42511 2.31 9.41999L9.38 9.36999L11.62 2.65999C11.6463 2.57996 11.6972 2.51028 11.7654 2.46088C11.8337 2.41148 11.9158 2.38489 12 2.38489C12.0842 2.38489 12.1663 2.41148 12.2346 2.46088C12.3028 2.51028 12.3537 2.57996 12.38 2.65999L14.62 9.36999L21.69 9.41999C21.7727 9.42511 21.852 9.45518 21.9172 9.50624C21.9825 9.5573 22.0308 9.62695 22.0557 9.706C22.0806 9.78505 22.081 9.86979 22.0568 9.94905C22.0325 10.0283 21.9848 10.0984 21.92 10.15L16.23 14.35L18.37 21.09C18.3983 21.1712 18.3997 21.2593 18.374 21.3413C18.3483 21.4234 18.2969 21.495 18.2273 21.5455C18.1577 21.596 18.0737 21.6227 17.9877 21.6217C17.9018 21.6207 17.8184 21.5921 17.75 21.54L12 17.42Z" fill="black"></path></svg>`
+            let s58 = document.createElement('div')
+            s58.setAttribute('class',"plws18")
+            s58.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.42L6.25 21.54C6.1816 21.5921 6.09823 21.6207 6.01227 21.6217C5.9263 21.6227 5.8423 21.596 5.77272 21.5455C5.70314 21.495 5.65169 21.4234 5.62598 21.3413C5.60027 21.2593 5.60168 21.1712 5.63 21.09L7.77 14.35L2.08 10.15C2.01515 10.0984 1.96747 10.0283 1.94325 9.94905C1.91902 9.86979 1.91938 9.78505 1.94429 9.706C1.9692 9.62695 2.01747 9.5573 2.08276 9.50624C2.14805 9.45518 2.22728 9.42511 2.31 9.41999L9.38 9.36999L11.62 2.65999C11.6463 2.57996 11.6972 2.51028 11.7654 2.46088C11.8337 2.41148 11.9158 2.38489 12 2.38489C12.0842 2.38489 12.1663 2.41148 12.2346 2.46088C12.3028 2.51028 12.3537 2.57996 12.38 2.65999L14.62 9.36999L21.69 9.41999C21.7727 9.42511 21.852 9.45518 21.9172 9.50624C21.9825 9.5573 22.0308 9.62695 22.0557 9.706C22.0806 9.78505 22.081 9.86979 22.0568 9.94905C22.0325 10.0283 21.9848 10.0984 21.92 10.15L16.23 14.35L18.37 21.09C18.3983 21.1712 18.3997 21.2593 18.374 21.3413C18.3483 21.4234 18.2969 21.495 18.2273 21.5455C18.1577 21.596 18.0737 21.6227 17.9877 21.6217C17.9018 21.6207 17.8184 21.5921 17.75 21.54L12 17.42Z" fill="black"></path></svg>`   
+            let d9 = document.createElement('div')
+            d9.setAttribute('class',"plwd9")
+
+            //last hidden div 
+            let d10 = document.createElement('div')
+            d10.setAttribute('class',"plwd10")
+            //d111
+            let d11 = document.createElement('div')
+            d11.setAttribute('class',"plwd11")
+            d11.innerHTML =`<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23 20"><title>Heart icon</title><path class="heart-icon-path" fill="#fff" stroke="currentColor" d="M11.4967297,19.0021565 C12.1501607,18.4744665 15.7313591,16.1461023 16.6556949,15.4660553 C20.4639993,12.6642314 22.5,9.83806845 22.500204,6.31427989 C22.4080534,3.08900922 19.7336922,0.5 16.5,0.5 C14.6798666,0.5 13.0132876,1.30878098 11.8904344,2.71234752 L11.5,3.20039053 L11.1095656,2.71234752 C9.98671236,1.30878098 8.32013337,0.5 6.5,0.5 C3.16873226,0.5 0.5,3.08355995 0.5,6.3 C0.5,9.87466924 2.55294628,12.7216506 6.38828771,15.5301224 C7.34346545,16.229562 10.7334347,18.4195137 11.4967297,19.0021565 Z"></path></svg>`
+
+
+            // let b1 = document.createElement('div')
+            // b1.setAttribute('class',"bd11")
+
+            // let bsvg = document.createElement('div')
+            // bsvg.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23 20"><title>Heart icon</title><path class="heart-icon-path" fill="#fff" stroke="currentColor" d="M11.4967297,19.0021565 C12.1501607,18.4744665 15.7313591,16.1461023 16.6556949,15.4660553 C20.4639993,12.6642314 22.5,9.83806845 22.500204,6.31427989 C22.4080534,3.08900922 19.7336922,0.5 16.5,0.5 C14.6798666,0.5 13.0132876,1.30878098 11.8904344,2.71234752 L11.5,3.20039053 L11.1095656,2.71234752 C9.98671236,1.30878098 8.32013337,0.5 6.5,0.5 C3.16873226,0.5 0.5,3.08355995 0.5,6.3 C0.5,9.87466924 2.55294628,12.7216506 6.38828771,15.5301224 C7.34346545,16.229562 10.7334347,18.4195137 11.4967297,19.0021565 Z"></path></svg>`
+            // b1.innerHTML=<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 23 20"><title>Heart icon</title><path class="heart-icon-path" fill="#fff" stroke="currentColor" d="M11.4967297,19.0021565 C12.1501607,18.4744665 15.7313591,16.1461023 16.6556949,15.4660553 C20.4639993,12.6642314 22.5,9.83806845 22.500204,6.31427989 C22.4080534,3.08900922 19.7336922,0.5 16.5,0.5 C14.6798666,0.5 13.0132876,1.30878098 11.8904344,2.71234752 L11.5,3.20039053 L11.1095656,2.71234752 C9.98671236,1.30878098 8.32013337,0.5 6.5,0.5 C3.16873226,0.5 0.5,3.08355995 0.5,6.3 C0.5,9.87466924 2.55294628,12.7216506 6.38828771,15.5301224 C7.34346545,16.229562 10.7334347,18.4195137 11.4967297,19.0021565 Z"></path></svg>
+
+   
+            // let bspan= document.createElement('span')
+            // bspan.setAttribute('class',"spand11")
+            // bspan.innerText= "a"
+            let b2 = document.createElement('div')
+            b2.setAttribute('class',"b2d11")
+            b2.innerText =  "ADD TO BAG"
+            b2.addEventListener("click",function(){
+                addtocart(ele)
+            })
+
+
+            d11.append(b2)
+            d10.append(d11)
+            d8.append(s18,s28,s38,s48,s58)
+            d7.append(s1,s2,s3)
+            d5.append(d6,d7,d8,d9)
+            d4.append(img)
+            d3.append(d4,d5)
+            d2.append(d3,d10)
+            d1.append(d2)
+
+
+            
+            container.append(d1)
+
+        })
+    }
+    //red heart beat
+
+    // let svg = document.querySelector(".plwd11 :first-child")
+    // // let svg = document.querySelector(".heart-icon-path")
+    
+    // svg.addEventListener("click",function(){
+    //     red()
+    // })
+    // let rc=0
+    // function red(){
+        
+    //     rc++
+    //     if(rc%2==1)
+    //     {
+    //         console.log("svggggggggg",svg)
+    //         svg.style.color = "red"
+    //         svg.fill = "red"
+    //     }
+    //     else{
+    //         svg.style.color = "black"
+    //     }
+    // }
+    //add to cart .
+
+     var cartArr = JSON.parse(localStorage.getItem('cartlocal')) || []
+    function addtocart(ele){
+        ele.quant = 1;
+        cartArr.push(ele)
+        console.log(cartArr)
+        localStorage.setItem('cartlocal',JSON.stringify(cartArr));
+        window.reload
+    }
+
+    // sort functions
+    let disc = document.querySelector("#discountid")
+    disc.addEventListener("click",function() {
+        discount()
+    })
+    function discount(){
+        let dd = document.querySelector("#sort-namely")
+        dd.innerHTML= "Sort By : Discount"
+        console.log("dd",dd)
+        let Data = data.sort(function(a,b){
+             return b.disc - a.disc
+         })
+
+         appendd(Data)
+         console.log('discountData',Data)
+        
+    }
+
+    //highto-low
+    let htol = document.querySelector("#htol")
+    htol.addEventListener("click",function() {
+        htolow()
+    })
+    
+
+    function htolow(){
+        let dd = document.querySelector("#sort-namely")
+        dd.innerHTML= "Sort By : PRICE HIGH TO LOW"
+        console.log("dd",dd)
+        data.sort(function(a,b){
+             return b.mrp - a.mrp
+         })
+
+         appendd(data)
+         console.log('mrp',data)
+        
+    }
+
+    //low to high resolution
+
+    let ltoh = document.querySelector("#ltoh")
+    ltoh.addEventListener("click",function() {
+        lowtoh()
+    })
+
+    function lowtoh(){
+        let dd = document.querySelector("#sort-namely")
+        dd.innerHTML= "Sort By : PRICE LOW TO HIGH"
+        console.log("dd",dd)
+        data.sort(function(a,b){
+             return a.mrp - b.mrp
+         })
+
+         appendd(data)
+         console.log('mrp',data)
+        
+    }
+
+    //name
+
+    let nameA = document.querySelector("#nameA")
+    nameA.addEventListener("click",function() {
+        name()
+    })
+
+    function name(){
+        let dd = document.querySelector("#sort-namely")
+        dd.innerHTML= "Sort By : Name"
+        console.log("dd",dd)
+        data.sort(function(a,b){
+             return a.name.localeCompare(b.name)
+         })
+
+         appendd(data)
+         console.log('name',data)
+        
+    }
+
+  
+  
+
+
+
+
+
+    let foot = document.querySelector("#footer")
+    foot.innerHTML=footermain()
+
+
+    // // product sort by CATEGORY
+
+    //     function detaSort(event){
+        
+    //     let pdatabase = JSON.parse(localStorage.getItem("Nykaman")) || []
+    //     console.log("pdatabase",pdatabase)
+    //         localStorage.removeItem("Nykaman")
+    //         // console.log(event)
+        
+    //         sort = pdatabase.filter(function(el){
+    //         return el.cat.includes(event)
+    //         })
+    //         // console.log("dataaaaa",sort)
+    //         localStorage.setItem("Nykaman",JSON.stringify(sort))
+    //         window.location.href ="./html/product.html"
+        
+    //     }
+
+
+
+    // cart function
+
+    const select=(id)=>{
+        return document.querySelector(id)
+    }
+    const make=(id)=>{
+        return document.createElement(id)
+    }
+    const removed=()=>{
+     console.log("sbg")
+ }
+
+ function addquant(i)
+{
+       
+        displayCart(data)
+
+}
+function subquant(i)
+{
+       
+}
+ 
+ let logo = select("#logos")
+    logo.addEventListener("click",function()
+    {
+      window.location.href="../index.html"
+    })
+
+ 
+ let prodDetailsDiv = select("#prodDetails");
+
+// let cartArr = JSON.parse(localStorage.getItem("cartlocal")) || []
+
+function displayCart(data) {
+    prodDetailsDiv.innerHTML=null
+ data.map(function (e,i) {
+    let Maindiv = make("div");
+    Maindiv.setAttribute("id", "Maindivs");
+    let proDiv = make("div");
+    proDiv.setAttribute("id", "proDiv");
+
+    let imgDiv = make("div");
+    imgDiv.setAttribute("id", "imgDiv");
+    let img = make("img");
+    img.src = e.img;
+    imgDiv.append(img);
+
+    let nameDiv = make("div");
+    nameDiv.setAttribute("id", "nameDiv");
+    let name = make("h4");
+    name.innerText = e.name;
+    let det = make("p");
+    det.innerText=  e.details
+    nameDiv.append(name,det);
+
+    // let remDiv = make("div");
+    // remDiv.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16"><path fill="currentColor" d="M4.886 0c-.572 0-1.043.471-1.043 1.043v.696H1.125a.348.348 0 0 0-.14 0h-.62a.348.348 0 1 0 0 .696h.347v12.522c0 .572.471 1.043 1.044 1.043h9.043c.573 0 1.044-.471 1.044-1.043V2.435h.348a.348.348 0 1 0 0-.696H8.712v-.696C8.712.471 8.242 0 7.67 0H4.886zm0 .696H7.67c.193 0 .348.155.348.347v.696h-3.48v-.696c0-.192.155-.347.348-.347zM1.408 2.435h9.74v12.522a.347.347 0 0 1-.349.347H1.756a.347.347 0 0 1-.348-.347V2.435zm2.75 1.728a.348.348 0 0 0-.043.01.348.348 0 0 0-.272.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359zm2.087 0a.348.348 0 0 0-.044.01.348.348 0 0 0-.271.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359zm2.087 0a.348.348 0 0 0-.044.01.348.348 0 0 0-.271.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359z"></path></svg>`;
+    // remDiv.addEventListener("click", removed(e));
+
+    proDiv.append(imgDiv, nameDiv);
+
+    let quantDiv = make("div");
+    quantDiv.setAttribute("id", "quantDiv");
+
+    let quantityDiv = make("div");
+    quantityDiv.setAttribute("id", "quantityDiv");
+    
+    let plus = make("div");
+    plus.setAttribute("class","plus")
+    plus.innerText="+"
+    plus.addEventListener("click",function()
+    {
+        console.log(i)
+        data[i].quant++
+        console.log(data[i])
+        console.log(typeof(quant))
+
+        localStorage.setItem("cartlocal",JSON.stringify(data))
+        displayCart(data)
+    })
+    let minus = make("div");
+    minus.innerText ="-"
+    minus.setAttribute("class","plus")
+    minus.addEventListener("click",function()
+    {
+        console.log(i)
+        data[i].quant--
+        console.log(data[i])
+        localStorage.setItem("cartlocal",JSON.stringify(data))
+        // subquant(i)
+        displayCart(data)
+
+    })
+    let div = make("div")
+    let qty = make("p");
+    qty.innerText = `Quantity ${e.quant}`;
+    div.append(qty)
+    quantityDiv.append(plus,div,minus);
+
+    let mrpDiv = make("div");
+    mrpDiv.setAttribute("id", "mrpDiv");
+    let mrp = make("p");
+    mrp.innerText = `₹ ${e.mrp}`;
+    mrpDiv.append(mrp);
+    quantDiv.append(quantityDiv, mrpDiv);
+    Maindiv.append(proDiv, quantDiv);
+
+    prodDetailsDiv.append(Maindiv);
+    
+  });
+
+  let s=select("#shoppingbag")
+  let c = 0;
+  data.forEach(function(e)
+  {
+    c++
+  })
+  s.innerHTML=`Shopping Bag(${c})`
+
+  let paymentDiv = make("div");
+  paymentDiv.innerHTML = `
+  
+              <div <div id="pay"><h3>Payment Details</h3></div></div>
+              <div id="details">
+                  <div> <h5>Bag Total</h5> <h5 id="total"></h5>
+                  </div>
+                  <div> <h5 id="disc">Bag Discount</h5> <h5 id="distotal"></h5>
+                  </div>
+                  <div>
+                      <h5>Sub Total</h5> <h5 id="subtotal"></h5>
+                  </div>
+                  <div>
+                      <h5>Shipping Charge</h5>
+                      <h5>Free</h5>
+                  </div>
+                  <div >
+                      <h4>Grand Total</h4>
+                      <h4 id="grandtotal"></h4>
+                  </div>
+              </div>
+              <div id="proceedDiv">
+            <div id="gt">
+                <p>Grand Total</p>
+                <h4 id="gdtotal"></h4>
+            </div>
+            <div id="proceed" >Proceed ></div>
+        </div>`;
+  prodDetailsDiv.append(paymentDiv);
+
+  let amount = data.reduce(function (a, e) {
+    return a + (e.mrp*e.quant);
+  }, 0);
+
+  let discountedprice = data.reduce(function (a, e) {
+    return a + Math.floor((e.mrp *e.quant* e.disc) / 100);
+  }, 0);
+
+  let subtotal = amount - discountedprice;
+  console.log(subtotal);
+  console.log(amount);
+  console.log(discountedprice);
+
+  select("#total").innerText = `₹ ${amount}`;
+  select("#distotal").innerText = `-₹ ${discountedprice}`;
+  select("#subtotal").innerText =  `₹ ${subtotal}`;
+  select("#grandtotal").innerHTML = `₹ ${subtotal}`;
+  select("#gdtotal").innerHTML = `₹ ${subtotal}`;
+
+}
+
+
+
+let cart = select("#cart")
+let counter=0
+cart.addEventListener("click",function(){
+    window.reload
+  counter++
+  let cartDiv=select("#cartDiv");
+  let pro = select("#product")
+  if(counter%2==1)
+  {
+    console.log(2)
+    cartDiv.style.opacity=1;
+   
+    cartDiv.style.backgroundColor="whitesmoke";
+    cartDiv.style.display="block"
+    pro.style.display="none";
+    displayCart(cartArr);
+    let proceedDiv = select("#proceed")
+    proceedDiv.addEventListener("click",function()
+    {
+    window.location.href="../html/address.html"
+    })
+        
+    
+  }
+  else{
+    cartDiv.style.opacity=0;
+    cartDiv.zIndex=0;
+    cartDiv.style.display="none"
+    pro.style.display="block"
+
+  }
+
+})
+
+   
+</script>
+
+<!-- <script src="../js/d.js"></script> -->
+<script src="../js/product.js"></script>

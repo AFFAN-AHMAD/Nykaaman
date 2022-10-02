@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/336aa36eed.js" crossorigin="anonymous"></script>
+    <title>Sign Up</title>
+    <style>
+         #container{
+        width:25%;
+        height:700px;
+        /* border:1px solid red; */
+        text-align: center;
+        margin-left: 37%;
+        margin-top: 70px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+    body {
+        background-color: rgb(243,243,243);
+    }
+    #login{
+        font-size: 17px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-weight: 500;
+            line-height: 26px;
+            display: inline-block;
+            margin-left: 18%;
+    }
+    #logo{
+        margin-left: -50px;
+    }
+    #signupcontainer{
+        border: 1px solid transparent;
+            width: 90%;
+            height: 125px;
+            margin: auto;
+            margin-top: 5%;
+    }
+    .name{
+        margin-left: 7%;
+            height: 43px;
+            width: 80%;
+            border: 0px;
+            outline: none;
+            border-bottom: 1px solid black;
+            margin-top: 5%;
+    }
+    #signUp{
+        width:80%;
+        height:40px;
+        font-size: 20px;
+        background-color: rgb(0,50,67);
+        color:white;
+        border-radius: 5px;
+        border:1px solid rgb(0,50,67);
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <i class="fas fa-times fa-2x" id="logo"></i>
+        <p id="login">ALMOST THERE!</p>
+        <hr style="opacity: 0.5; width: 90%;">
+        <br><br><br><br>
+
+         
+         <form id="form" action="/" method="GET">
+
+        <div id="SignUpContainer">
+            <input  id="fullNameSignup" class="name" type="text" placeholder="Full Name" required>
+
+            <input id="number" class="name" type="number" placeholder="Mobile Number" required>
+
+            <input  id="emailSignup" class="name" type="email" placeholder="Email Address" required>
+
+
+        </div>
+    </form>
+        <br><br><br>
+
+        <div id="sign">
+            <button id="signUp">SAVE</button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+
+
+
+
+      
+    //   const name = document.getElementById("fullNameSignup")
+    //   const email = document.getElementById("emailSignup")
+    //   const form = document.getElementById("form")
+
+
+    document.getElementById("logo").addEventListener("click", () => {
+        window.location = "otp.html";
+    });
+
+
+    let btn_save = document.getElementById("signUp");
+
+    let username = JSON.parse(localStorage.getItem("UserDetails")) || [];
+   
+
+    btn_save.addEventListener("click", () =>{
+
+        let userD = {
+            name:  document.getElementById("fullNameSignup").value,
+            number: document.getAnimations("number").value,
+            email:  document.getElementById("emailSignup").value,
+        }
+        username.push(userD);
+        localStorage.setItem("UserDetails", JSON.stringify(username));
+
+
+        window.location = "../index.html";
+    });
+
+</script>

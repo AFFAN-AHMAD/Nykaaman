@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="" />
+    <style>
+      #cartDiv {
+        width: 30%;
+        height:auto;
+        /* border: 1px solid red; */
+        float: right;
+        background-color: whitesmoke;
+      }
+      #shopping {
+        width: 100%;
+        height: 60px;
+        margin-top: 0px;
+        border: 1px solid black;
+        background-color: #fff;
+        text-align: center;
+        color: #bbb;
+        padding-top: -5px;
+        display: flex;
+        /* justify-content: center; */
+      }
+      #shopping,#pay  h3 {
+        /* border:1px solid red; */
+        color:#134;
+        text-align: center;
+      }
+      .back-btn {
+        margin-right: 150px;
+      }
+      .empty-bag-img {
+        text-align: center;
+        margin-top: 70px;
+      }
+      #prodDetails {
+        height: 700px;
+        overflow: scroll;
+      }
+      #Maindivs {
+        width: 100%;
+        height: 200px;
+        /* border: 1px solid red; */
+        margin-top: 10px;
+      }
+      #Maindivs img {
+        width: 100%;
+        height: 100%;
+      }
+      #proDiv {
+        height: 70%;
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+      }
+      #quantDiv {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+      }
+      #quantityDiv {
+        display: flex;
+        justify-content: space-around;
+      }
+      #proceedDiv{
+        /* border:1px solid red; */
+          width:100%;
+          background-color: #fff;
+          display: flex;
+          justify-content: space-between;
+         
+      }
+    
+     #details div{
+      display: flex;
+      height:30px;
+      margin: 0px 10px;
+      justify-content: space-between;
+      font-size: 20px;
+      line-height: 17px;
+      color:rgb(94, 92, 92)
+      ;
+     }
+     #details div div{
+      display: flex;
+      height:30px
+     }
+     #details{
+       background-color:#fff
+     }
+     #gt{
+       width:50%;
+       justify-content: space-between;
+       margin-left: 10px;
+       font-weight: bolder;
+       height:70px;
+       box-sizing: border-box;
+       margin-top:40px ;
+     }
+     #gt+div{
+      font-size: 24px;
+      font-weight: bolder;
+      text-align: center;
+      padding:20px 10px 0px 0px;
+      background-color: #285773;
+      width:50%;
+      height:70px;
+      margin-top:40px ;
+      box-sizing: border-box;
+      color:white
+     }
+     #gt p{
+      margin-bottom:-12px;
+      color:rgb(147, 143, 143)
+     }
+     #disc,#distotal{
+       color:#285773
+     }
+    #cartDiv{
+      opacity:0;
+      visibility:0;
+      z-index:0;
+    }
+    #cartDiv hr{
+      margin-top:30px
+    }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <div id="cartDiv">
+      <div id="shopping">
+        <button type="button" class="back-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="21">
+            <path
+              fill="#FC2779"
+              fill-rule="evenodd"
+              d="M3.605 10.417l8.242-8.243a.503.503 0 0 0 .005-.71l-1.32-1.32a.505.505 0 0 0-.71.004L.148 9.82a.506.506 0 0 0-.09.597.506.506 0 0 0 .09.597l9.672 9.672c.195.194.516.2.71.004l1.32-1.32a.503.503 0 0 0-.004-.71l-8.242-8.243z"
+            ></path>
+          </svg>
+        </button>
+        <h3 id="shoppingbag"></h3>
+      </div>
+      <div id="prodDetails">
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module">
+  const select = (id) => {
+    return document.querySelector(id);
+  };
+
+  const make = (id) => {
+    return document.createElement(id);
+  };
+ const removed=()=>{
+     console.log("sbg")
+ }
+  import { navbar } from "../components/navbar.js";
+  let nav = select("#navbar");
+  nav.innerHTML = navbar();
+
+  
+  let prodDetailsDiv = select("#prodDetails");
+
+  let cartArr = JSON.parse(localStorage.getItem("cartlocal")) || []
+
+  function displayCart(data) {
+      
+   data.map(function (e,i) {
+      let Maindiv = make("div");
+      Maindiv.setAttribute("id", "Maindivs");
+      let proDiv = make("div");
+      proDiv.setAttribute("id", "proDiv");
+
+      let imgDiv = make("div");
+      imgDiv.setAttribute("id", "imgDiv");
+      let img = make("img");
+      img.src = e.img;
+      imgDiv.append(img);
+
+      let nameDiv = make("div");
+      nameDiv.setAttribute("id", "nameDiv");
+      let name = make("p");
+      name.innerText = e.name;
+      nameDiv.append(name);
+
+      let remDiv = make("div");
+      remDiv.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16"><path fill="currentColor" d="M4.886 0c-.572 0-1.043.471-1.043 1.043v.696H1.125a.348.348 0 0 0-.14 0h-.62a.348.348 0 1 0 0 .696h.347v12.522c0 .572.471 1.043 1.044 1.043h9.043c.573 0 1.044-.471 1.044-1.043V2.435h.348a.348.348 0 1 0 0-.696H8.712v-.696C8.712.471 8.242 0 7.67 0H4.886zm0 .696H7.67c.193 0 .348.155.348.347v.696h-3.48v-.696c0-.192.155-.347.348-.347zM1.408 2.435h9.74v12.522a.347.347 0 0 1-.349.347H1.756a.347.347 0 0 1-.348-.347V2.435zm2.75 1.728a.348.348 0 0 0-.043.01.348.348 0 0 0-.272.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359zm2.087 0a.348.348 0 0 0-.044.01.348.348 0 0 0-.271.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359zm2.087 0a.348.348 0 0 0-.044.01.348.348 0 0 0-.271.349v8.695a.348.348 0 1 0 .695 0V4.522a.348.348 0 0 0-.38-.359z"></path></svg>`;
+      remDiv.addEventListener("click", removed(e));
+
+      proDiv.append(imgDiv, nameDiv, remDiv);
+
+      let quantDiv = make("div");
+      quantDiv.setAttribute("id", "quantDiv");
+
+      let quantityDiv = make("div");
+      quantityDiv.setAttribute("id", "quantityDiv");
+      let qty = make("p");
+      
+      qty.innerText = `Quantity ${e.quant}`;
+      quantityDiv.append(qty);
+
+      let mrpDiv = make("div");
+      mrpDiv.setAttribute("id", "mrpDiv");
+      let mrp = make("p");
+      mrp.innerText = `₹ ${e.mrp}`;
+      mrpDiv.append(mrp);
+      quantDiv.append(quantityDiv, mrpDiv);
+      Maindiv.append(proDiv, quantDiv);
+
+      prodDetailsDiv.append(Maindiv);
+      
+    });
+
+    let s=select("#shoppingbag")
+    let c = 0;
+    data.forEach(function(e)
+    {
+      c++
+    })
+    s.innerHTML=`Shopping Bag(${c})`
+
+    let paymentDiv = make("div");
+    paymentDiv.innerHTML = `
+    
+                <div <div id="pay"><h3>Payment Details</h3></div></div>
+                <div id="details">
+                    <div> <h5>Bag Total</h5> <h5 id="total"></h5>
+                    </div>
+                    <div> <h5 id="disc">Bag Discount</h5> <h5 id="distotal"></h5>
+                    </div>
+                    <div>
+                        <h5>Sub Total</h5> <h5 id="subtotal"></h5>
+                    </div>
+                    <div>
+                        <h5>Shipping Charge</h5>
+                        <h5>Free</h5>
+                    </div>
+                    <div >
+                        <h4>Grand Total</h4>
+                        <h4 id="grandtotal"></h4>
+                    </div>
+                </div>
+                <hr></hr>
+                <div id="proceedDiv">
+              <div id="gt">
+                  <p>Grand Total</p>
+                  <h4 id="gdtotal"></h4>
+              </div>
+              <div id="proceed" >Proceed ></div>
+          </div>`;
+    prodDetailsDiv.append(paymentDiv);
+
+    let amount = data.reduce(function (a, e) {
+      return a + (e.mrp*e.quant);
+    }, 0);
+
+    let discountedprice = data.reduce(function (a, e) {
+      return a + Math.floor((e.mrp *e.quant* e.disc) / 100);
+    }, 0);
+
+    let subtotal = amount - discountedprice;
+    console.log(subtotal);
+    console.log(amount);
+    console.log(discountedprice);
+
+    select("#total").innerText = `₹ ${amount}`;
+    select("#distotal").innerText = `-₹ ${discountedprice}`;
+    select("#subtotal").innerText =  `₹ ${subtotal}`;
+    select("#grandtotal").innerHTML = `₹ ${subtotal}`;
+    select("#gdtotal").innerHTML = `₹ ${subtotal}`;
+
+  }
+
+  displayCart(cartArr);
+
+
+  let cart = select("#cart")
+  let count=0
+  cart.addEventListener("click",function(){
+    count++
+    let cartDiv=select("#cartDiv");
+    if(count%2==1)
+    {
+      console.log(2)
+      cartDiv.style.opacity=1;
+      cartDiv.zIndex=2;
+    }
+    else{
+      cartDiv.style.opacity=0;
+      cartDiv.zIndex=0;
+    }
+
+  })
+
+  let proceedDiv = select("#proceed")
+  proceed.addEventListener("click",function()
+  {
+    window.location.href="../html/address.html"
+  })
+</script>
