@@ -1,5 +1,5 @@
 const navbar = () => {
-    return `   
+  return `   
     <section class="sec1">
       <div>Great Offers From The Best Brands</div>
       <div>
@@ -29,21 +29,21 @@ const navbar = () => {
                   </div> 
                   <svg width="24" id="cart" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 7.2H16.2V6.9C16.3 4.5 14.4 2.5 12 2.5C9.6 2.6 7.8 4.5 7.8 6.9V7.2H3.5C2.9 7.2 2.5 7.6 2.5 8.2V16.4C2.5 19.2 4.7 21.4 7.5 21.4H16.5C19.3 21.4 21.5 19.2 21.5 16.4V8.2C21.5 7.7 21.1 7.2 20.5 7.2ZM9.3 6.9C9.3 5.4 10.5 4.1 12 4C13.5 4.1 14.7 5.4 14.7 6.9V7.2H9.3V6.9ZM20 16.5C20 18.4 18.4 20 16.5 20H7.5C5.6 20 4 18.4 4 16.5V8.7H7.8V10.7C7.6 10.9 7.5 11.2 7.5 11.4C7.5 12 8 12.4 8.5 12.4C9 12.4 9.5 11.9 9.5 11.4C9.5 11.1 9.4 10.9 9.2 10.7V8.7H14.6V10.6C14.4 10.8 14.3 11.1 14.3 11.4C14.3 12 14.7 12.5 15.3 12.5C15.9 12.5 16.4 12.1 16.4 11.5C16.4 11.2 16.3 11 16.1 10.8V8.8H20V16.5Z" fill="black"></path></svg></div>
                  
-    </section>`
-}
+    </section>`;
+};
 const menu = () => {
-  return `  <div class = "category"><a href="#">Shaving</a>
+  return `  <div class = "category"><a href="../html/product.html">Shaving</a>
   <div class="subcategory">
           <div class="cat1"> <h5>SHAVING APPLIANCES</h5>
               
-                  <p><a href="#">Shavers</a></p>
-                  <p><a href="#">Trimmers</a></p>
+                  <p><a href="../html/product.html">Shavers</a></p>
+                  <p><a href="../html/product.html">Trimmers</a></p>
               
           </div>
           <div class="cat2"> <h5>SHAVING TOOLS & ACCESSORIES</h5> 
               
-                  <p><a href="#">Razors & Castridges</a></p>
-                  <p><a href="#">Shaving Brushes</a></p>
+                  <p><a href="../html/product.html">Razors & Castridges</a></p>
+                  <p><a href="../html/product.html">Shaving Brushes</a></p>
               
           </div>
           <div class="cat1"> <h5>SHAVING CREAMS & LOTIONS</h5>
@@ -57,59 +57,59 @@ const menu = () => {
   </div>
   </div>
 
-  <div class="category"> <a href="#">Beard Care</a>
+  <div class="category"> <a href="../html">Beard Care</a>
       <div class="subcategory">
           <div class="cat1" > <h5>BEARD CARE</h5>
               
-              <p><a href="#">Beard Oil</a></p>
-              <p><a href="#">Moustache Oil</a></p>
-              <p><a href="#">Beard Softener</a></p>
-              <p><a href="#">Beard Colour</a></p>
-              <p><a href="#">Beard Serum</a></p>
-              <p><a href="#">Beard Cream</a></p>
-              <p><a href="#">Beard Balm & Butter</a></p>
-              <p><a href="#">Beard Wash</a></p>
+              <p><a href="../html/product.html">Beard Oil</a></p>
+              <p><a href="../html/product.html">Moustache Oil</a></p>
+              <p><a href="../html/product.html">Beard Softener</a></p>
+              <p><a href="../html/product.html">Beard Colour</a></p>
+              <p><a href="../html/product.html">Beard Serum</a></p>
+              <p><a href="../html/product.html">Beard Cream</a></p>
+              <p><a href="../html/product.html">Beard Balm & Butter</a></p>
+              <p><a href="../html/product.html">Beard Wash</a></p>
           
             
             </div>
             <div class="cat2"> <h5>BEARD STYLING</h5>
             
-              <p><a href="#">Beard & Moustache Wax</a></p>
-              <p><a href="#">Beard Comb</a></p>
-              <p><a href="#">Beard Gel</a></p>
+              <p><a href="../html/product.html">Beard & Moustache Wax</a></p>
+              <p><a href="../html/product.html">Beard Comb</a></p>
+              <p><a href="../html/product.html">Beard Gel</a></p>
         
             </div>
             <div class="cat1"> <h5>BEARD KITS</h5></div>
          </div>
   </div>
 
-  <div class="category"><a href="#">Hair</a>
+  <div class="category"><a href="../html/product.html">Hair</a>
       <div class="subcategory">
           <div class="cat1"><h5>HAIR CARE</h5>
            
-              <p><a href="#">Shampoo</a></p>
-              <p><a href="#">Conditioner</a></p>
-              <p><a href="#">Hair Oils</a></p>
+              <p><a href="../html/product.html">Shampoo</a></p>
+              <p><a href="../html/product.html">Conditioner</a></p>
+              <p><a href="../html/product.html">Hair Oils</a></p>
            
           </div>
           <div class="cat2"> <h5>HAIR STYLING</h5>
             
-                  <p><a href="#">Hair gel & Waxes</a></p>
-                  <p><a href="#">Hair Color</a></p>
+                  <p><a href="../html/product.html">Hair gel & Waxes</a></p>
+                  <p><a href="../html/product.html">Hair Color</a></p>
             
           </div>
           <div class="cat1"><h5>HAIR BRUSHES & DRYERS</h5>
             
-                  <p><a href="#">Hair Brushes & Combs</a></p>
-                  <p><a href="#">Hair Dryers</a></p>
+                  <p><a href="../html/product.html">Hair Brushes & Combs</a></p>
+                  <p><a href="../html/product.html">Hair Dryers</a></p>
              
           </div>
           <div class="cat2"><h5>SHOP BY CONCERN</h5>
           
-                  <p><a href="#">Hairfall & Thinning</a></p>
-                  <p><a href="#">Dry & Frizzy Hair</a></p>
-                  <p><a href="#">Dandruff</a></p>
-                  <p><a href="#">Dull Hair</a></p>
+                  <p><a href="../html/product.html">Hairfall & Thinning</a></p>
+                  <p><a href="../html/product.html">Dry & Frizzy Hair</a></p>
+                  <p><a href="../html/product.html">Dandruff</a></p>
+                  <p><a href="../html/product.html">Dull Hair</a></p>
            
           </div>
           <div class="cat1">
@@ -118,88 +118,88 @@ const menu = () => {
       </div>
   </div>
 
-  <div class="category"><a href="#">Skincare</a>
+  <div class="category"><a href="../html/product.html">Skincare</a>
       <div class="subcategory">
           <div class="cat1"> <h5>FACE</h5>
              
-                  <p><a href="#">Face Wash</a></p>
-                  <p><a href="#">moisturisers</a></p>
-                  <p><a href="#">Sunscreen</a></p>
-                  <p><a href="#">Masks & Peels</a></p>
-                  <p><a href="#">Scrubs & Exfoliators</a></p>
+                  <p><a href="../html/product.html">Face Wash</a></p>
+                  <p><a href="../html/product.html">moisturisers</a></p>
+                  <p><a href="../html/product.html">Sunscreen</a></p>
+                  <p><a href="../html/product.html">Masks & Peels</a></p>
+                  <p><a href="../html/product.html">Scrubs & Exfoliators</a></p>
              
           </div>
           <div class="cat2"><h5>MAKEUP FOR MEN</h5>
              
-                  <p><a href="#">Primer</a></p>
-                  <p><a href="#">Concealer</a></p>
-                  <p><a href="#">Foundation</a></p>
-                  <p><a href="#">Mattifying Face Powder</a></p>
-                  <p><a href="#">BB & CC Cream</a></p>
-                  <p><a href="#">Brows</a></p>
-                  <p><a href="#">Tools & Brushes</a></p>
+                  <p><a href="../html/product.html">Primer</a></p>
+                  <p><a href="../html/product.html">Concealer</a></p>
+                  <p><a href="../html/product.html">Foundation</a></p>
+                  <p><a href="../html/product.html">Mattifying Face Powder</a></p>
+                  <p><a href="../html/product.html">BB & CC Cream</a></p>
+                  <p><a href="../html/product.html">Brows</a></p>
+                  <p><a href="../html/product.html">Tools & Brushes</a></p>
              
           </div>
           <div class="cat1"><h5>SKIN CARE KITS</h5></div>
           <div class="cat2"><h5>SHOP BY CONCERN</h5>
               
-                  <p><a href="#">Dry Skin</a></p>
-                  <p><a href="#">Oil Removal</a></p>
-                  <p><a href="#">Acne</a></p>
-                  <p><a href="#">Blackheads</a></p>
-                  <p><a href="#">Tan Removal</a></p>
-                  <p><a href="#">Dark Spots</a></p>
+                  <p><a href="../html/product.html">Dry Skin</a></p>
+                  <p><a href="../html/product.html">Oil Removal</a></p>
+                  <p><a href="../html/product.html">Acne</a></p>
+                  <p><a href="../html/product.html">Blackheads</a></p>
+                  <p><a href="../html/product.html">Tan Removal</a></p>
+                  <p><a href="../html/product.html">Dark Spots</a></p>
               
           </div>
       </div>
   </div>
 
-  <div class="category"><a href="#">Personal Care</a> 
+  <div class="category"><a href="../html/product.html">Personal Care</a> 
       <div class="subcategory" id="pcare">
           <div class="cat1"><h5>BATH & BODY</h5>
          
-                  <p><a href="#">Bath & body</a></p>
-                  <p><a href="#">Body Wash/ Shower Gels</a></p>
-                  <p><a href="#">Soaps</a></p>
-                  <p><a href="#">Talc & Intimate Care</a></p>
-                  <p><a href="#">Body Lotions</a></p>
+                  <p><a href="../html/product.html">Bath & body</a></p>
+                  <p><a href="../html/product.html">Body Wash/ Shower Gels</a></p>
+                  <p><a href="../html/product.html">Soaps</a></p>
+                  <p><a href="../html/product.html">Talc & Intimate Care</a></p>
+                  <p><a href="../html/product.html">Body Lotions</a></p>
           
           </div>
           <div class="cat2"><h5>HAIR CLIPPERS & BODY GROOMERS</h5></div>
           <div class="cat1"> <h5>DENTAL CARE</h5>
           
-                  <p><a href="#">Toothpaste</a></p>
-                  <p><a href="#">Toothbrush</a></p>
-                  <p><a href="#">Floss & Tongue Cleaners</a></p>
-                  <p><a href="#">Mouthwash</a></p>
-                  <p><a href="#">Mouth Freshner</a></p>
+                  <p><a href="../html/product.html">Toothpaste</a></p>
+                  <p><a href="../html/product.html">Toothbrush</a></p>
+                  <p><a href="../html/product.html">Floss & Tongue Cleaners</a></p>
+                  <p><a href="../html/product.html">Mouthwash</a></p>
+                  <p><a href="../html/product.html">Mouth Freshner</a></p>
         
           </div>
           <div class="cat2"><h5>HAND CARE</h5>
           
-                  <p><a href="#">Handwash </a></p>
-                  <p><a href="#">Hand Sanitizer </a></p>
-                  <p><a href="#">Hand Cream</a></p>
+                  <p><a href="../html/product.html">Handwash </a></p>
+                  <p><a href="../html/product.html">Hand Sanitizer </a></p>
+                  <p><a href="../html/product.html">Hand Cream</a></p>
         
           </div>
           <div class="cat1"><h5>FOOT CARE</h5>
               
-                  <p><a href="#">Foot Cream</a></p>
-                  <p><a href="#">Foot Scrub</a></p>
+                  <p><a href="../html/product.html">Foot Cream</a></p>
+                  <p><a href="../html/product.html">Foot Scrub</a></p>
             
           </div>
           <div class="cat2"><h5>HOME & HEALTH</h5>
           
-              <p><a href="#">Safety Essentials</a></p>
-              <p><a href="#">Masks & Gloves</a></p>
-              <p><a href="#">Air Freshners</a></p>
-              <p><a href="#">Household Supplies</a></p>
+              <p><a href="../html/product.html">Safety Essentials</a></p>
+              <p><a href="../html/product.html">Masks & Gloves</a></p>
+              <p><a href="../html/product.html">Air Freshners</a></p>
+              <p><a href="../html/product.html">Household Supplies</a></p>
         
           </div>
       </div>
   </div>
   
-  <div class="category"><a href="#">Perfumes & Deos</a>
+  <div class="category"><a href="../html/product.html">Perfumes & Deos</a>
       <div class="subcategory">
               <div class="cat1"><h5>PERFUMES (EDT/EDP)</h5></div>
               <div class="cat2"> <h5>BODY MIST/ SPRAY</h5></div>
@@ -208,85 +208,85 @@ const menu = () => {
       </div>
   </div>
 
-  <div class="category"><a href="#">Health & Nutrition</a>
+  <div class="category"><a href="../html/product.html">Health & Nutrition</a>
       <div class="subcategory" id="health">
           <div class="cat1"> <h5>HEALTH SUPPLEMENTS</h5>
               
-                  <p><a href="#">Multivitamins</a></p>
-                  <p><a href="#">Calcium & Vitamin D</a></p>
-                  <p><a href="#">Magnesium & Zinc</a></p>
-                  <p><a href="#">Omega 3 & Fish Oil </a></p>
-                  <p><a href="#">Immunity Boosters & Vitamin C</a></p>
-                  <p><a href="#">Melatonin (sleep)</a></p>
-                  <p><a href="#">Biotin (Hair Supplement)</a></p>
-                  <p><a href="#">Collagen (Skin & Bones)</a></p>
+                  <p><a href="../html/product.html">Multivitamins</a></p>
+                  <p><a href="../html/product.html">Calcium & Vitamin D</a></p>
+                  <p><a href="../html/product.html">Magnesium & Zinc</a></p>
+                  <p><a href="../html/product.html">Omega 3 & Fish Oil </a></p>
+                  <p><a href="../html/product.html">Immunity Boosters & Vitamin C</a></p>
+                  <p><a href="../html/product.html">Melatonin (sleep)</a></p>
+                  <p><a href="../html/product.html">Biotin (Hair Supplement)</a></p>
+                  <p><a href="../html/product.html">Collagen (Skin & Bones)</a></p>
             
             </div>
             <div class="cat2"><h5>SPORTS NUTRITION</h5>
               
-                  <p><a href="#">Whey Protein </a></p>
-                  <p><a href="#">Whey Isolate Protein </a></p>
-                  <p><a href="#">Plant Protein</a></p>
-                  <p><a href="#">BCAA & Other Muscle Support</a></p>
-                  <p><a href="#">Weight & Mass Gainers</a></p>
+                  <p><a href="../html/product.html">Whey Protein </a></p>
+                  <p><a href="../html/product.html">Whey Isolate Protein </a></p>
+                  <p><a href="../html/product.html">Plant Protein</a></p>
+                  <p><a href="../html/product.html">BCAA & Other Muscle Support</a></p>
+                  <p><a href="../html/product.html">Weight & Mass Gainers</a></p>
             
             </div>
             <div class="cat1"><h5>WEIGHT MANAGEMENT</h5>
               
-                  <p><a href="#">Apple Cider Vinegar</a></p>
-                  <p><a href="#">Green Tea</a></p>
-                  <p><a href="#">Green Coffee</a></p>
-                  <p><a href="#">Fat Burner (Capsules & Gummies)</a></p>
-                  <p><a href="#">Slimming Shakes & Juices</a></p>
-                  <p><a href="#">Sugar Substitutes</a></p>
+                  <p><a href="../html/product.html">Apple Cider Vinegar</a></p>
+                  <p><a href="../html/product.html">Green Tea</a></p>
+                  <p><a href="../html/product.html">Green Coffee</a></p>
+                  <p><a href="../html/product.html">Fat Burner (Capsules & Gummies)</a></p>
+                  <p><a href="../html/product.html">Slimming Shakes & Juices</a></p>
+                  <p><a href="../html/product.html">Sugar Substitutes</a></p>
             
               </div>
             <div class="cat2"><h5>HEALTH FOODS</h5>
               
-                  <p><a href="#">Dry Fruits, Nuts & Berries</a></p>
-                  <p><a href="#">Edible Seeds</a></p>
-                  <p><a href="#">Black Tea & Coffee</a></p>
-                  <p><a href="#">Herbal Teas</a></p>
-                  <p><a href="#">Breakfast Cereals</a></p>
-                  <p><a href="#">Peanut Butter & Protein Snacks</a></p>
-                  <p><a href="#">Other Health Foods</a></p>
+                  <p><a href="../html/product.html">Dry Fruits, Nuts & Berries</a></p>
+                  <p><a href="../html/product.html">Edible Seeds</a></p>
+                  <p><a href="../html/product.html">Black Tea & Coffee</a></p>
+                  <p><a href="../html/product.html">Herbal Teas</a></p>
+                  <p><a href="../html/product.html">Breakfast Cereals</a></p>
+                  <p><a href="../html/product.html">Peanut Butter & Protein Snacks</a></p>
+                  <p><a href="../html/product.html">Other Health Foods</a></p>
             
             </div>
             <div class="cat1"><h5>WELLNESS EQUIPMENTS</h5>
               
-                  <p><a href="#">Weighing Scales</a></p>
-                  <p><a href="#">Fitness</a></p>
-                  <p><a href="#">Face Steamers</a></p>
+                  <p><a href="../html/product.html">Weighing Scales</a></p>
+                  <p><a href="../html/product.html">Fitness</a></p>
+                  <p><a href="../html/product.html">Face Steamers</a></p>
             
             </div>
             <div class="cat2"><h5>AYURVEDA & HERBS</h5>
               
-                  <p><a href="#">Ashwagandha</a></p>
-                  <p><a href="#">Neem (Blood Purifier)</a></p>
-                  <p><a href="#">Amla(Immunity,Skin)</a></p>
-                  <p><a href="#">Aloe Vera (Liver, Skin)</a></p>
-                  <p><a href="#">Milk Thistle(Liver)</a></p>
-                  <p><a href="#">Wheatgrass(Detox)</a></p>
-                  <p><a href="#">Tulsi</a></p>
-                  <p><a href="#">Giloy & Guduchi (Immunity)</a></p>
-                  <p><a href="#">Turmeric (Anti Inflamatory)</a></p>
+                  <p><a href="../html/product.html">Ashwagandha</a></p>
+                  <p><a href="../html/product.html">Neem (Blood Purifier)</a></p>
+                  <p><a href="../html/product.html">Amla(Immunity,Skin)</a></p>
+                  <p><a href="../html/product.html">Aloe Vera (Liver, Skin)</a></p>
+                  <p><a href="../html/product.html">Milk Thistle(Liver)</a></p>
+                  <p><a href="../html/product.html">Wheatgrass(Detox)</a></p>
+                  <p><a href="../html/product.html">Tulsi</a></p>
+                  <p><a href="../html/product.html">Giloy & Guduchi (Immunity)</a></p>
+                  <p><a href="../html/product.html">Turmeric (Anti Inflamatory)</a></p>
             
             </div>
             <div class="cat1"><h5>SHOP BY CONCERN</h5>
               
-                  <p><a href="#">Diabetes</a></p>
-                  <p><a href="#">Digestion (Gut Health)</a></p>
-                  <p><a href="#">Organs - Liver, Heart, Kidney</a></p>
-                  <p><a href="#">Safety & First Aid</a></p>
-                  <p><a href="#">Weakness & Vitality</a></p>
-                  <p><a href="#">Mental Wellness</a></p>
-                  <p><a href="#">Blood Pressure</a></p>
+                  <p><a href="../html/product.html">Diabetes</a></p>
+                  <p><a href="../html/product.html">Digestion (Gut Health)</a></p>
+                  <p><a href="../html/product.html">Organs - Liver, Heart, Kidney</a></p>
+                  <p><a href="../html/product.html">Safety & First Aid</a></p>
+                  <p><a href="../html/product.html">Weakness & Vitality</a></p>
+                  <p><a href="../html/product.html">Mental Wellness</a></p>
+                  <p><a href="../html/product.html">Blood Pressure</a></p>
             
             </div>
       </div>
   </div>
 
-  <div class="category"><a href="#">LUXE</a>
+  <div class="category"><a href="../html/product.html">LUXE</a>
       <div class="subcategory" id="lux">
           <div class="cat1"><h5>BATH & BODY</h5></div>
           <div class="cat2"><h5>HAIR</h5> </div>
@@ -296,7 +296,7 @@ const menu = () => {
   </div>
 
   
-  <div class="category"><a href="#">Gadgets & Tech</a>
+  <div class="category"><a href="../html/product.html">Gadgets & Tech</a>
      <div class="subcategory" id="gadgets">
           <div class="cat1"><h5>HEADPHONES</h5></div>
           <div class="cat2"><h5>SPEAKERS</h5></div>
@@ -311,7 +311,7 @@ const menu = () => {
   </div>
 
   
-  <div class="category"><a href="#">Lifestyle</a>
+  <div class="category"><a href="../html/product.html">Lifestyle</a>
       <div class="subcategory" id="life">
           <div class="cat1"><h5>FOOTWEAR</h5></div>
           <div class="cat2"><h5>WATCHES</h5></div>
@@ -322,7 +322,7 @@ const menu = () => {
       </div>
   </div>
 
-  <div class="category"><a href="#">Pet Care</a>
+  <div class="category"><a href="../html/product.html">Pet Care</a>
       <div class="subcategory" id="petcare">
           <div class="cat1"><h5>CLEANING & HYGEINE</h5></div>
           <div class="cat2"><h5>PET GROOMING</h5></div>
@@ -333,6 +333,6 @@ const menu = () => {
 
   <div><img src="../IMAGES/OFFER.PNG" alt=""></div>
 
-`
-}
-export { navbar, menu }
+`;
+};
+export { navbar, menu };

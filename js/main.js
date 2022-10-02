@@ -162,7 +162,7 @@ setInterval(function () {
    //product sort by CATEGORY
 
    function detaSort(event){
-  
+  console.log("**********datasort")
     let pdatabase = JSON.parse(localStorage.getItem("Nykaman")) || []
     console.log("pdatabase",pdatabase)
       localStorage.removeItem("Nykaman")
