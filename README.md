@@ -58,7 +58,7 @@ https://github.com/Mohd-Haroon/Nyka-man-clone
 
 
 Here you can check our website live:-
-https://remarkable-klepon-8f9936.netlify.app/
+https://nykaaman.vercel.app/
 
 
 Here you can also visit blog of our website:-
